@@ -2,6 +2,7 @@
 body.theme-light {
     background-color: #ffffff;
     color: #000000;
+    overflow: hidden;
 }
 .theme-light .navbar-custom {
     background-color: #f8f9fa;
@@ -178,29 +179,28 @@ header {
 
 .tipo-container{
     color: white;
-    height: 18vh;
-    width: 47vh;
+    height: 10vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .tipo-text{
-    font-size: 3vh;
-    font-weight: bold;
+    font-size: 4vh;
+
 }
 
 .dias-text{
-    font-size: 3vh;
-    font-weight: bold;
+    font-size: 4vh;
+
     color: white;
     margin-left: 2vh;
 }
 
 .horarios-text{
-    font-size: 3vh;
-    font-weight: bold;
+    font-size: 4vh;
     color: white;
     margin-left: 2vh;
 }
@@ -212,6 +212,7 @@ header {
     align-items: center;
     width: 70vh;
     height: 74vh;
+    margin-left: 5vw;
 }
 
 .compra-subcontainer{
@@ -221,19 +222,27 @@ header {
 }
 
 .horarios-container{
-    height: 27vh;
-    width: 47vh;
+    height: 25vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     border: 2px solid white;
     border-radius: 1vh;
     position: relative;
     background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 2vw;
+}
+
+.tipo-subcontainer {
+    width: 50%;
+    margin-top: 0.5vw;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .dias-container{
-    height: 24vh;
-    width: 47vh;
+    height: 20vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     border: 2px solid white;
@@ -246,63 +255,63 @@ header {
 }
 
 .fila-dias{
-    height: 6vh;
+    height: 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .day-empty{
-    width: 4vh;
-    height: 4vh;
+    width: 7%;
+    height: 80%;
     background-color: rgb(35, 0, 164);
     border: 2px solid white;
     border-radius: 1vh;
 }
 
 .day-light{
-    width: 4vh;
-    height: 4vh;
+    width: 7%;
+    height: 80%;
     background-color: white;
     border: 2px solid white;
     border-radius: 1vh;
 }
 
-.day-over{
-    width: 4vh;
-    height: 4vh;
+.day-light:hover {
+    background-color: pink;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.selected-button {
     background-color: rgb(255, 0, 76);
-    border: 2px solid white;
-    border-radius: 1vh;
 }
 
 .horario-azul{
-    width: 6vh;
-    height: 6vh;
+    width: 15%;
+    height: 100%;
     background-color: rgb(35, 0, 164);
     border: 2px solid white;
     border-radius: 1vh;
     color: black;
 }
 
-.horario-hover{
-    width: 6vh;
-    height: 6vh;
-    background-color: rgb(255, 0, 76);
-    border: 2px solid white;
-    border-radius: 1vh;
-    color: black;
-}
-
 .horario-light{
-    width: 6vh;
-    height: 6vh;
+    width: 15%;
+    height: 100%;
     background-color: white;
     border: 2px solid white;
     border-radius: 1vh;
 }
 
+.horario-light:hover {
+    background-color: pink;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
 .fila-horarios{
+    height: 24%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -316,7 +325,7 @@ header {
 }
 .btn-siguiente{
     position: absolute;
-    bottom: -50px;
+    top: 14vw;
     right: 0;
 }
 
@@ -457,6 +466,4 @@ h1 {
 
 /* USER */
 
-.c-user {
-    background-color: red;
-}
+
