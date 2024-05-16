@@ -177,6 +177,20 @@ header {
     align-items: center;
 }
 
+.slogan {
+    width: 20%;
+    height: 50%;
+    margin-right: 33vw;
+    margin-top: 1vw;
+}
+
+.slogan p{
+    font-size: 25px;
+    font-style: italic;
+    color: white;
+    letter-spacing: 0.2vw;
+}
+
 .tipo-container{
     color: white;
     height: 10vh;
@@ -468,3 +482,16 @@ h1 {
 /* USER */
 
 
+/* PROFILE */
+
+.profile-container {
+    height: 75%;
+    width: 80%;
+    margin: auto;
+    margin-top: 2.7vw;
+    margin-right: 0vw;
+    background-image: url(img/badges.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

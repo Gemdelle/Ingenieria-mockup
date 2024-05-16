@@ -18,6 +18,9 @@
         <div class="logo" onclick="irALanding()"></div>
         <h1 class="neon">CINE TEATRO</h1>
     </div>
+    <div class="slogan">
+        <p>A un click de tu sala</p>
+    </div>
     <div class="buttons" id="buttons-header">
         <button class="signin-btn" onclick="mostrarPorfileButtons()">SIGN IN</button>
         <button class="signin-btn">SIGN UP</button>
@@ -103,6 +106,10 @@
 
     function irALanding() {
         window.location.href = 'landing.html';
+    }
+
+    function irAProfile() {
+        window.location.href = 'profile.html';
     }
 
     document.querySelectorAll('.carousel-item img').forEach(image => {
