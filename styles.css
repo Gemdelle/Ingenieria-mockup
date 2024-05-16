@@ -47,6 +47,10 @@ body.theme-dark {
     margin-top: 9vh !important;
 }
 
+.container-buy {
+    margin-top: 4vh !important;
+}
+
 #floating-container.joker-description {
     background-image: url('img/JOKER copy.png');
     background-size: cover;
@@ -117,7 +121,7 @@ body {
 header {
     margin: 0;
     width: 100vw;
-    height: 4vw;
+    height: 6vw;
     background: black;
     padding: 1vw;
     display: flex!important;
@@ -139,6 +143,22 @@ header {
     border-top: 0.2vw solid white;
 }
 
+.buy-preview-container {
+    position: relative;
+    border: 0.2vw solid white;
+    height: 35vh;
+    width: 65vh;
+    border-radius: 2vh;
+}
+.buy-preview{
+    background-image: url('img/image01.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 2vh;
+}
+
 .sub-language-container {
     bottom: 10px;
     left: 10px;
@@ -156,12 +176,156 @@ header {
     align-items: center;
 }
 
+.tipo-container{
+    color: white;
+    height: 18vh;
+    width: 47vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tipo-text{
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.dias-text{
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    margin-left: 2vh;
+}
+
+.horarios-text{
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    margin-left: 2vh;
+}
+
+.selections-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 70vh;
+    height: 74vh;
+}
+
+.compra-subcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horarios-container{
+    height: 27vh;
+    width: 47vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 1vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dias-container{
+    height: 24vh;
+    width: 47vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 1vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dias-habiles-container{
+    height: 100%;
+}
+
+.fila-dias{
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.day-empty{
+    width: 4vh;
+    height: 4vh;
+    background-color: rgb(35, 0, 164);
+    border: 2px solid white;
+    border-radius: 1vh;
+}
+
+.day-light{
+    width: 4vh;
+    height: 4vh;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 1vh;
+}
+
+.day-over{
+    width: 4vh;
+    height: 4vh;
+    background-color: rgb(255, 0, 76);
+    border: 2px solid white;
+    border-radius: 1vh;
+}
+
+.horario-azul{
+    width: 6vh;
+    height: 6vh;
+    background-color: rgb(35, 0, 164);
+    border: 2px solid white;
+    border-radius: 1vh;
+    color: black;
+}
+
+.horario-hover{
+    width: 6vh;
+    height: 6vh;
+    background-color: rgb(255, 0, 76);
+    border: 2px solid white;
+    border-radius: 1vh;
+    color: black;
+}
+
+.horario-light{
+    width: 6vh;
+    height: 6vh;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 1vh;
+}
+
+.fila-horarios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selector-horarios-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.btn-siguiente{
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+}
+
 /* ----------------------------------------------------------
 BUTTONS */
 
 .buttons {
     margin-right: 2vw;
-    width: 14%;
+    width: 13%;
     display: flex;
     justify-content: space-between;
     /* background-color: white; */
@@ -169,6 +333,22 @@ BUTTONS */
     justify-content: space-between;
     align-items: center;
 }
+.profile-buttons{
+    margin-right: 3vw;
+    width: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: white; */
+}
+.avatar-container{
+    width: 20vh;
+    height: 12vh;
+    background-image: url('img/level.png');
+    background-size: cover;
+    background-position: center;
+}
+
 
 .signin-btn {
     background: transparent;

@@ -1,8 +1,8 @@
-function mostrarOtraPantalla() {
+function mostrarPorfileButtons() {
     // Oculta el login-screen
-    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('buttons-header').style.display = 'none';
     // Muestra la otra pantalla
-    document.getElementById('otra-pantalla').style.display = 'block';
+    document.getElementById('profile-header').style.display = 'flex';
 }
 
 document.addEventListener('DOMContentLoaded', () => {

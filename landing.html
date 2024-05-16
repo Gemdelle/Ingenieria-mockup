@@ -15,12 +15,17 @@
 <body class="theme-light">
 <header>
     <div class="presentation">
-        <div class="logo"></div>
+        <div class="logo" onclick="irALanding()"></div>
         <h1 class="neon">CINE TEATRO</h1>
     </div>
-    <div class="buttons">
-        <button class="signin-btn" onclick="mostrarOtraPantalla()">SIGN IN</button>
+    <div class="buttons" id="buttons-header">
+        <button class="signin-btn" onclick="mostrarPorfileButtons()">SIGN IN</button>
         <button class="signin-btn">SIGN UP</button>
+    </div>
+    <div class="profile-buttons" id="profile-header" style="display: none">
+        <button class="signin-btn">LANDING</button>
+        <button class="signin-btn">PROFILE</button>
+        <div class="avatar-container"></div>
     </div>
 </header>
 
@@ -67,30 +72,38 @@
                 <button class="btn btn-light" id="subtitlesButton">subtítulos</button>
             </div>
             <div id="floating-container">
-                <button class="signin-btn comprar">COMPRAR</button>
+                <button class="signin-btn comprar" onclick="comprar()">COMPRAR</button>
             </div>
         </div>
     </div>
 </div>
-<div class="theme-switch">
-    <label for="themeToggle">Dark Mode</label>
-    <input type="checkbox" id="themeToggle">
-</div>
+<!--<div class="theme-switch">-->
+<!--    <label for="themeToggle">Dark Mode</label>-->
+<!--    <input type="checkbox" id="themeToggle">-->
+<!--</div>-->
 <script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     let isVideoPlaying = false;
-    document.getElementById('themeToggle').addEventListener('change', function(event) {
-        if (event.target.checked) {
-            document.body.classList.remove('theme-light');
-            document.body.classList.add('theme-dark');
-        } else {
-            document.body.classList.remove('theme-dark');
-            document.body.classList.add('theme-light');
-        }
-    });
+    // document.getElementById('themeToggle').addEventListener('change', function(event) {
+    //     if (event.target.checked) {
+    //         document.body.classList.remove('theme-light');
+    //         document.body.classList.add('theme-dark');
+    //     } else {
+    //         document.body.classList.remove('theme-dark');
+    //         document.body.classList.add('theme-light');
+    //     }
+    // });
+
+    function comprar() {
+        window.location.href = 'compra.html';
+    }
+
+    function irALanding() {
+        window.location.href = 'landing.html';
+    }
 
     document.querySelectorAll('.carousel-item img').forEach(image => {
         image.addEventListener('click', function() {

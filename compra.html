@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+<header>
+    <div class="presentation">
+        <div class="logo" onclick="irALanding()"></div>
+        <h1 class="neon">Cine Teatro</h1>
+    </div>
+    <div class="profile-buttons" id="profile-header">
+        <button class="signin-btn">LANDING</button>
+        <button class="signin-btn">PROFILE</button>
+        <div class="avatar-container">
+            <div class="progress-bar-container">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="avatar"></div>
+            <div class="avatar-level"></div>
+        </div>
+    </div>
+</header>
+
+<div class="container-buy">
+    <div class="row justify-content-center compra-subcontainer">
+        <div class="buy-preview-container">
+            <div class="buy-preview"></div>
+            <div class="position-absolute sub-language-container">
+                <button class="btn btn-light" id="languageButton">Idioma: Español</button>
+                <button class="btn btn-light" id="subtitlesButton">Sin Sub</button>
+            </div>
+        </div>
+        <div class="selections-container">
+            <div class="tipo-container">
+                <div class="tipo-text">Tipo</div>
+                <div class="2d-3d-container">
+                    <button class="signin-btn">2D</button>
+                    <button class="signin-btn">3D</button>
+                </div>
+            </div>
+            <div class="dias-container">
+                <div class="dias-text">Dias</div>
+                <div class="dias-habiles-container">
+                    <div class="fila-dias">
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                    </div>
+                    <div class="fila-dias">
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-light"></div>
+                        <div class="day-over"></div>
+                        <div class="day-light"></div>
+                        <div class="day-light"></div>
+                        <div class="day-light"></div>
+                    </div>
+                    <div class="fila-dias">
+                        <div class="day-light"></div>
+                        <div class="day-light"></div>
+                        <div class="day-light"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                        <div class="day-empty"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="horarios-container">
+                <div class="horarios-text">Horarios</div>
+                <div class="selector-horarios-container">
+                    <div class="fila-horarios">
+                        <div class="horario-azul"></div>
+                        <div class="horario-azul"></div>
+                        <div class="horario-azul"></div>
+                        <div class="horario-azul"></div>
+                        <div class="horario-azul"></div>
+                    </div>
+                    <div class="fila-horarios">
+                        <div class="horario-light"></div>
+                        <div class="horario-light"></div>
+                        <div class="horario-light"></div>
+                        <div class="horario-hover"></div>
+                        <div class="horario-light"></div>
+                    </div>
+                    <div class="fila-horarios">
+                        <div class="horario-light"></div>
+                        <div class="horario-light"></div>
+                        <div class="horario-light"></div>
+                        <div class="horario-light"></div>
+                        <div class="horario-light"></div>
+                    </div>
+                </div>
+                <button class="signin-btn btn-siguiente" onclick="irAAsientos()">SIGUIENTE</button>
+            </div>
+        </div>
+        </div>
+</div>
+<!--<div class="theme-switch">-->
+<!--    <label for="themeToggle">Dark Mode</label>-->
+<!--    <input type="checkbox" id="themeToggle">-->
+<!--</div>-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+    function irALanding() {
+        window.location.href = 'landing.html';
+    }
+
+    function irAAsientos() {
+        window.location.href = 'asientos.html';
+    }
+
+</script>
+</body>
+</html>
