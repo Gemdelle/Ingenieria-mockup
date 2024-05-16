@@ -32,6 +32,41 @@ body.theme-dark {
     border-color: #adb5bd;
 }
 
+#floating-container {
+    position: absolute;
+    top: 34vh;
+    right: -14vh;
+    transform: translate(-50%, -50%);
+    width: 44vh;
+    height: 30vh;
+    display: none;
+    z-index: 1000;
+}
+
+.container {
+    margin-top: 9vh !important;
+}
+
+#floating-container.joker-description {
+    background-image: url('img/JOKER copy.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#floating-container.killbill-description {
+    background-image: url('img/KILL BILL copy.png');
+    background-size: cover;
+    background-position: center;
+    width: 47vh;
+}
+
+#floating-container.fighter-description {
+    background-image: url('img/FIGHTER copy.png');
+    background-size: cover;
+    background-position: center;
+    height: 36vh;
+}
+
 .carousel-control-next, .carousel-control-prev {
     filter: invert(100%);
 }
@@ -42,9 +77,11 @@ body.theme-dark {
 }
 .overlay-button {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    top: 2vh;
+    left: 4vh;
     z-index: 10;
+    width: 10vh !important;
+    height: 10vh !important;
 }
 .carousel-item img {
     width: 100%;
@@ -52,7 +89,7 @@ body.theme-dark {
     object-fit: cover; /* Ajuste de imagen para mantener la proporción */
 }
 .carousel-inner {
-    width: 100rem; /* Anchura específica para el carrusel */
+    width: 120rem; /* Anchura específica para el carrusel */
     height: 40rem; /* Altura específica para el carrusel */
 }
 .theme-switch {
@@ -72,6 +109,9 @@ body {
     font-family: Cantarell;
     font-family: Saira Condensed;
     height: 100vh;
+    background-image: url('img/background-1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -96,11 +136,13 @@ header {
 
 .carousel-actions-container{
     position: relative;
+    border-bottom: 0.2vw solid white;
+    border-top: 0.2vw solid white;
 }
 
 .sub-language-container {
     bottom: 10px;
-    right: 10px;
+    left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
