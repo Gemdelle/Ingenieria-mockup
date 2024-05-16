@@ -1,0 +1,82 @@
+/* CSS ASIENTOS */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: darkblue;
+}
+
+.plan {
+    margin-top: 4vw;
+    height: 35vw !important;
+}
+
+.grid-container {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1.5vw);
+    grid-template-rows: repeat(30, 1.15vw);
+
+    background-color: #403f51;
+    border: 2px solid white;
+    border-radius: 0.5vw;
+    width: auto;
+    padding: 0.3vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#grid2 {
+    grid-template-columns: repeat(10, 1.6vw);
+}
+
+#grid3 {
+    grid-template-columns: repeat(5, 1.6vw);
+}
+
+.cell {
+    width: 1.3vw;
+    height: 0.8vw;
+    background-color: #f0f8ff;
+    border: 1px solid white;
+    border-radius: 0.3vw;
+}
+
+.cell:hover {
+    background-color: pink;
+}
+
+.cell.taken {
+    background-color: rgb(35, 0, 164);
+}
+
+.cell.clicked {
+    background-color: rgb(255, 0, 76);
+}
+
+/* CSS SUMA TICKETS */
+
+#ticket-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+#value {
+    font-size: 20px;
+}
