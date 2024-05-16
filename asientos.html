@@ -1,25 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Example</title>
+    <title>Compra Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="asientos.css">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
-<body>
-    <div class="plan">
-        <div class="grid-container">
-            <div class="grid" id="grid3"></div>
-            <div class="grid" id="grid2"></div>
-            <div class="grid" id="grid3"></div>
+<body class="theme-light">
+<header>
+    <div class="presentation">
+        <div class="logo" onclick="irALanding()"></div>
+        <h1 class="neon">Cine Teatro</h1>
+    </div>
+    <div class="profile-buttons" id="profile-header">
+        <button class="signin-btn">LANDING</button>
+        <button class="signin-btn">PROFILE</button>
+        <div class="avatar-container">
+            <div class="progress-bar-container">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="avatar"></div>
+            <div class="avatar-level"></div>
         </div>
     </div>
-    <div id="ticket-count">
-        <button id="decrement">-</button>
-        <span id="value">0</span>
-        <button id="increment">+</button>
-    </div>
+</header>
 
-    <script src="script.js"></script>
+<div class="container-buy">
+    <div class="compra-subcontainer">
+        <div class="plan">
+            <div class="screen">PANTALLA</div>
+            <div class="grid-container">
+                <div class="grid" id="grid3"></div>
+                <div class="grid" id="grid2"></div>
+                <div class="grid" id="grid3"></div>
+            </div>
+        </div>
+        <div id="ticket-count">
+            <div class="entradas-container">
+                <span>Cantidad</span>
+                <span id="value">0</span>
+            </div>
+            <div class="total-container">
+                <span>Total</span>
+                <span id="money">$0</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="theme-switch">-->
+<!--    <label for="themeToggle">Dark Mode</label>-->
+<!--    <input type="checkbox" id="themeToggle">-->
+<!--</div>-->
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+    function irALanding() {
+        window.location.href = 'landing.html';
+    }
+
+    function irAAsientos() {
+        window.location.href = 'asientos.html';
+    }
+
+</script>
 </body>
 </html>
+

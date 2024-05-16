@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     cells.forEach(cell => {
         cell.addEventListener('click', () => {
             cell.classList.toggle('clicked');
+            const cells = document.querySelectorAll('.cell.clicked');
+            const valueElement = document.getElementById('value');
+            const moneyElement = document.getElementById('money');
+            valueElement.textContent = cells.length.toString();
+            moneyElement.textContent = "$"+(cells.length * 2000).toString();
         });
     });
 });
