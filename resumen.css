@@ -1,0 +1,78 @@
+.ticket {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    border-radius: 1vh;
+}
+.ticket h2 {
+    text-align: center;
+    margin-top: 0;
+}
+.ticket p {
+    margin: 5px 0;
+}
+.ticket .detalle {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+.ticket .detalle p {
+    margin: 2px 0;
+}
+.ticket .total {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.resumen-subcontainer{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.contenedor-de-resumen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resumen-row{
+    height: 54vh;
+    width: 56vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.qrbutton-container{
+    height: 10vh;
+    color: white;
+    text-align: center;
+}
+
+.envio-a-email{
+    height: 10vh;
+    color: white;
+    text-align: center;
+}
+
+.qr{
+    background-image: url('img/qr.png');
+    background-size: cover;
+    background-position: center;
+    width: 12vh;
+    height: 12vh;
+}
+
+.discount {
+    background-image: url('img/discount.png');
+    background-size: cover;
+    background-position: center;
+    width: 20vh;
+    height: 12vh;
+    position: absolute;
+    bottom: -24px;
+    right: -2px;
+}

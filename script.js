@@ -70,27 +70,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// SUMA TICKETS
-document.addEventListener('DOMContentLoaded', () => {
-    const valueElement = document.getElementById('value');
-    let value = 0;
-
-    const incrementButton = document.getElementById('increment');
-    const decrementButton = document.getElementById('decrement');
-
-    incrementButton.addEventListener('click', () => {
-        value++;
-        updateValue();
-    });
-
-    decrementButton.addEventListener('click', () => {
-        if (value > 0) {
-            value--;
-            updateValue();
-        }
-    });
-
-    function updateValue() {
-        valueElement.textContent = value;
-    }
-});

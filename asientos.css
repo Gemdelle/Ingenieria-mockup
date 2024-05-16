@@ -113,3 +113,11 @@ button {
     font-size: 16px;
     margin: 0 10px;
 }
+
+.ticket-container{
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

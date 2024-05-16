@@ -299,7 +299,7 @@ header {
 }
 
 .selected-button {
-    background-color: rgb(255, 0, 76);
+    background-color: rgb(255, 0, 76) !important;
 }
 
 .horario-azul{
