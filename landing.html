@@ -24,7 +24,7 @@
     </div>
 </header>
 
-<div class="container mt-4">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-18 carousel-actions-container">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -35,13 +35,13 @@
                 </ol>
                 <div class="carousel-inner rounded mx-auto">
                     <div class="carousel-item active">
-                        <img src="img/image01.jpg" class="d-block carousel-image" alt="Imagen 1" data-video-id="t433PEQGErc" data-language="Español" data-subtitles="Español">
+                        <img src="img/image01.jpg" class="d-block carousel-image" alt="Imagen 1" data-class-name="joker-description" data-video-id="t433PEQGErc" data-language="Idioma: Español" data-subtitles="Sin Sub">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/image02.jpg" class="d-block carousel-image" alt="Imagen 2" data-video-id="7kSuas6mRpk" data-language="Inglés" data-subtitles="Inglés">
+                        <img src="img/image02.jpg" class="d-block carousel-image" alt="Imagen 2" data-class-name="killbill-description" data-video-id="7kSuas6mRpk" data-language="Idioma: Inglés" data-subtitles="Sub: Español">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/image03.jpg" class="d-block carousel-image" alt="Imagen 3" data-video-id="lAVYll_wBeY" data-language="Francés" data-subtitles="Francés">
+                        <img src="img/image03.jpg" class="d-block carousel-image" alt="Imagen 3" data-class-name="fighter-description" data-video-id="lAVYll_wBeY" data-language="Idioma: Francés" data-subtitles="Sub: Español">
                         <div class="overlay-button">
                             <button class="btn btn-dark btn-circle">HOY</button>
                         </div>
@@ -66,6 +66,9 @@
                 <button class="btn btn-light" id="languageButton">idioma</button>
                 <button class="btn btn-light" id="subtitlesButton">subtítulos</button>
             </div>
+            <div id="floating-container">
+                <button class="signin-btn comprar">COMPRAR</button>
+            </div>
         </div>
     </div>
 </div>
@@ -78,6 +81,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
+    let isVideoPlaying = false;
     document.getElementById('themeToggle').addEventListener('change', function(event) {
         if (event.target.checked) {
             document.body.classList.remove('theme-light');
@@ -88,13 +92,13 @@
         }
     });
 
-    document.querySelectorAll('.carousel-image').forEach(image => {
+    document.querySelectorAll('.carousel-item img').forEach(image => {
         image.addEventListener('click', function() {
             const videoId = this.getAttribute('data-video-id');
             const iframe = document.createElement('iframe');
-            iframe.width = '1600';
-            iframe.height = '640';
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&showinfo=0`;
+            iframe.width = this.width;
+            iframe.height = this.height;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&showinfo=0&rel=0`;
             iframe.frameBorder = '0';
             iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
             iframe.allowFullscreen = true;
@@ -103,12 +107,27 @@
             carouselItem.innerHTML = '';
             carouselItem.appendChild(iframe);
 
+
+            const floatingContainer = document.getElementById('floating-container');
+
+            floatingContainer.style.display = 'block';
+            const floatingClass = this.getAttribute('data-class-name');
+            floatingContainer.classList.add(floatingClass);
+
+            document.getElementById('carouselExampleIndicators').classList.add('paused');
+            isVideoPlaying = true;
+
             const handleEscape = function(event) {
                 if (event.key === 'Escape') {
                     iframe.remove();
-                    carouselItem.innerHTML = '';
-                    carouselItem.appendChild(image);
+                    carouselItem.innerHTML = `<img src="${image.src}" class="d-block carousel-image" alt="${image.alt}" data-class-name="${image.getAttribute('data-class-name')}" data-video-id="${videoId}" data-language="${image.getAttribute('data-language')}" data-subtitles="${image.getAttribute('data-subtitles')}">`;
+
+                    floatingContainer.style.display = 'none';
+                    floatingContainer.classList.remove(floatingClass);
+
                     document.removeEventListener('keydown', handleEscape);
+                    document.getElementById('carouselExampleIndicators').classList.remove('paused');
+                    isVideoPlaying = false;
                 }
             };
 
@@ -116,12 +135,10 @@
         });
     });
 
-    $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
-        const activeItem = document.querySelector('.carousel-item.active img');
-        const language = activeItem.getAttribute('data-language');
-        const subtitles = activeItem.getAttribute('data-subtitles');
-        document.getElementById('languageButton').textContent = language;
-        document.getElementById('subtitlesButton').textContent = subtitles;
+    document.getElementById('carouselExampleIndicators').addEventListener('slide.bs.carousel', function(event) {
+        if (isVideoPlaying) {
+            event.preventDefault(); // Prevent sliding if a video is playing
+        }
     });
 
     const initialLanguage = document.querySelector('.carousel-item.active img').getAttribute('data-language');
