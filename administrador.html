@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="administrador.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="theme-light">
+<header>
+    <div class="presentation">
+        <div class="logo" onclick="irALanding()">Logo</div>
+        <div class="button-container">
+            <button>Administrador</button>
+            <button>Marketing</button>
+            <button>Empleado</button>
+            <button>Usuario</button>
+        </div>
+        <h1 class="neon">Cine Teatro</h1>
+    </div>
+    <div class="slogan">
+        <p>A un click de tu sala</p>
+    </div>
+    <div class="profile-buttons" id="profile-header">
+        <button class="signin-btn" onclick="irALanding()">LANDING</button>
+    </div>
+</header>
+
+<div class="container-buy">
+    <table>
+        <thead>
+        <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Fecha de creación</th>
+            <th>Estado</th>
+            <th>Nivel de Acceso</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="id">1</td>
+            <td>pedro@gmail.com</td>
+            <td>2018-07-01 03:04:00 PM</td>
+            <td><span class="status success"></span></td>
+            <td><span class="admin-progress done">ADMINISTRADOR</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="id">2</td>
+            <td>pepe@gmail.com</td>
+            <td>2018-10-30 10:04:00 PM</td>
+            <td><span class="status fail"></span></td>
+            <td>
+                <span class="admin-progress doing">USUARIO</span>
+                <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="id">3</td>
+            <td>monty@gmail.com</td>
+            <td>2018-08-10 06:04:00 AM</td>
+            <td><span class="status success"></span></td>
+            <td>
+                <span class="admin-progress todo">EMPLEADO</span>
+                <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="id">4</td>
+            <td>luna@gmail.com</td>
+            <td>2018-08-10 11:04:00 PM</td>
+            <td><span class="status fail"></span></td>
+            <td>
+                <span class="admin-progress todo">EMPLEADO</span>
+                <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="id">5</td>
+            <td>octavia-blake@gmail.com</td>
+            <td>2018-08-10 14:04:00 PM</td>
+            <td><span class="status success"></span></td>
+            <td>
+                <span class="admin-progress todo">USUARIO</span>
+                <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="id">6</td>
+            <td>bellamy-blake@gmail.com</td>
+            <td>2018-08-10 03:04:00 AM</td>
+            <td><span class="status success"></span></td>
+            <td>
+                <span class="admin-progress todo">USUARIO</span>
+                <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="id">7</td>
+            <td>clark@gmail.com</td>
+            <td>2018-08-10 09:04:00 PM</td>
+            <td><span class="status fail"></span></td>
+            <td>
+                <span class="admin-progress todo">USUARIO</span>
+                <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="id">8</td>
+            <td>raven@gmail.com</td>
+            <td>2018-08-10 05:04:00 PM</td>
+            <td><span class="status success"></span></td>
+            <td>
+                <span class="admin-progress todo">EMPLEADO</span>
+                <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button class="exportacion">Exportación a Tango</button>
+</div>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+    function irALanding() {
+        window.location.href = 'index.html';
+
+    }
+
+    function irAlResumen() {
+        window.location.href = 'resumen.html';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const logo = document.querySelector('.logo');
+        const buttonContainer = document.querySelector('.button-container');
+
+        logo.addEventListener('mouseover', function() {
+            if (buttonContainer.style.display === 'flex'){
+                buttonContainer.style.transform = 'translateX(-50%) translateY(-20px)';
+                buttonContainer.style.opacity = '0';
+                setTimeout(() => {
+                    buttonContainer.style.display = 'none';
+                }, 300); // match the transition duration
+            } else {
+                buttonContainer.style.display = 'flex';
+                buttonContainer.style.transform = 'translateX(-50%) translateY(0)';
+                buttonContainer.style.opacity = '1';
+            }
+        });
+    });
+</script>
+</body>
+</html>
+

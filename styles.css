@@ -120,6 +120,7 @@ body {
 }
 
 header {
+    position: relative;
     margin: 0;
     width: 100vw;
     height: 6vw;
@@ -175,18 +176,20 @@ header {
     display: flex;
     /* background-color: white; */
     align-items: center;
+    position: relative;
 }
 
 .slogan {
-    width: auto;
+    width: 28vh;
     height: 50%;
-    margin-left: -26vw;
-    margin-top: 1vw;
+    position: absolute;
+    top: 9vh;
+    left: 120vh;
 }
 
 .slogan p{
     width: auto;
-    font-size: 25px;
+    font-size: 2vh;
     font-style: italic;
     color: white;
     letter-spacing: 0.2vw;
@@ -374,6 +377,63 @@ BUTTONS */
     background-position: center;
 }
 
+.button-container {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 100%;
+    left: 52%;
+    transform: translateX(-50%) translateY(-20px);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 999;
+    opacity: 0;
+    transition: all 0.3s ease;
+    width: 18vh;
+    height: 20vh;
+    text-align: center;
+}
+
+.button-container button {
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgb(255, 255, 255);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Saira Condensed', sans-serif;
+    width: 15vh;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.button-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgb(247, 0, 255);/* Ajusta el brillo al pasar el mouse */
+    border: 2px solid rgb(132, 0, 255);
+}
+
+.button-container button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.5);
+}
+
+
+.comprar {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: -64px;
+    right: 13px;
+}
 
 .signin-btn {
     background: transparent;
@@ -387,13 +447,6 @@ BUTTONS */
     transition: transform 0.2s, box-shadow 0.2s;
     font-family: 'Saira Condensed', sans-serif;
     width: 6vw;
-}
-
-.comprar {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    bottom: -64px;
-    right: 13px;
 }
 
 .signin-btn:hover {
@@ -417,36 +470,32 @@ BUTTONS */
 h1 {
     margin: 0;
     margin-left: 1vw;
-    font-family: Monoton;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: bold;
     font-size: 2.5vw !important;
-    letter-spacing: 0.4vw;
-    font-weight: lighter;
+    letter-spacing: 0.8vw;
     width: 25vw;
 }
 
 .logo {
-    background-image: url(img/logo-1.png);
+    background-image: url(img/logo-2.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     width: 6vw;
     height: 100%;
+    position: relative;
+    filter: brightness(9);
 }
 
 /* NEON H1 */
 .neon {
+    left: 78vh;
+    position: absolute;
     font-size: 4em;
     color: #ffffff; /* Color base del texto en un tono muy claro */
     text-align: center;
-    text-shadow: 
-        0 0 5px #e0e0ff,
-        0 0 10px #e0e0ff,
-        0 0 15px #7f00ff,
-        0 0 20px #7f00ff,
-        0 0 30px #7f00ff,
-        0 0 40px #1e90ff,
-        0 0 50px #1e90ff,
-        0 0 60px #1e90ff;
+    text-shadow: 0 0 5px #e0e0ff, 0 0 10px #e0e0ff, 0 0 15px #420185, 0 0 20px #420185, 0 0 30px #420185, 0 0 40px #1e90ff, 0 0 50px #1e90ff, 0 0 60px #1e90ff;
     animation: flicker 1.5s infinite alternate;
 }
 

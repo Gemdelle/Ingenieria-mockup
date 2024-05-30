@@ -1,0 +1,68 @@
+.container-marketing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.other-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 18vh;
+}
+
+.buttons-campaign-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 26vh;
+}
+
+.graphic-1{
+    opacity: 0;
+    width: 110vh;
+    height: 60vh;
+    background-image: url('img/graphic-1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+.graphic-2{
+    opacity: 0;
+    width: 110vh;
+    height: 60vh;
+    background-image: url('img/graphic-2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+.graphics-container {
+    width: 110vh;
+    height: 60vh;
+    position: relative;
+    margin-top: 2vh;
+}
+.graphic-container{
+    margin-left: 2vh;
+}
+
+.migracion {
+    opacity: 0;
+    width: 28vh!important;
+}
+
+.registros {
+    opacity: 0;
+}
+
+.exportar-grafico{
+    position: absolute;
+    bottom: -6vh;
+    right: 0vh;
+}

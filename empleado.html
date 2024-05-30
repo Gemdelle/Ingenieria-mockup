@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="empleado.css">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body class="theme-light">
 <header>
@@ -29,40 +31,30 @@
     </div>
     <div class="profile-buttons" id="profile-header">
         <button class="signin-btn" onclick="irALanding()">LANDING</button>
-        <button class="signin-btn">PROFILE</button>
-        <div class="avatar-container">
-            <div class="progress-bar-container">
-                <div class="progress-fill"></div>
-            </div>
-            <div class="avatar"></div>
-            <div class="avatar-level"></div>
-        </div>
     </div>
 </header>
-    <div class="profile-container">
+
+<div class="container-marketing">
+    <div class="other-container">
+        <div class="graphic-container">
+            <div class="user-qr"></div>
+            <button class="signin-btn escanear-qr" onclick="mostrarQR()">ESCANEAR QR</button>
+        </div>
+        <button class="signin-btn exportar-grafico">EXPORTAR</button>
     </div>
+</div>
+
 <script>
 
     function irALanding() {
         window.location.href = 'index.html';
     }
-    document.addEventListener('DOMContentLoaded', function() {
-        const logo = document.querySelector('.logo');
-        const buttonContainer = document.querySelector('.button-container');
 
-        logo.addEventListener('mouseover', function() {
-            if (buttonContainer.style.display === 'flex'){
-                buttonContainer.style.transform = 'translateX(-50%) translateY(-20px)';
-                buttonContainer.style.opacity = '0';
-                setTimeout(() => {
-                    buttonContainer.style.display = 'none';
-                }, 300); // match the transition duration
-            } else {
-                buttonContainer.style.display = 'flex';
-                buttonContainer.style.transform = 'translateX(-50%) translateY(0)';
-                buttonContainer.style.opacity = '1';
-            }
-        });
-    });
+    function mostrarQR() {
+        const qr = document.querySelector('.user-qr');
+        qr.classList.add("qr-img")
+    }
 </script>
 </body>
+</html>
+

@@ -1,0 +1,109 @@
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 110vh;
+    color: white;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgba(0,0,0,0.5);
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.id {
+    color: #4CAF50;
+}
+
+.status.success {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-color: #4CAF50;
+    border-radius: 50%;
+}
+
+.status.fail {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-color: #f44336;
+    border-radius: 50%;
+}
+
+.admin-progress {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.container-buy {
+    margin-top: 4vh !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.action-btn.edit {
+    color: #2196F3;
+}
+
+.action-btn.delete {
+    color: #f44336;
+}
+
+.action-btn i {
+    font-size: 14px;
+}
+
+.exportacion {
+    margin-top: 2vh;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgb(255, 255, 255);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Saira Condensed', sans-serif;
+    width: 10vw;
+}
+
+.exportacion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgb(247, 0, 255);/* Ajusta el brillo al pasar el mouse */
+    border: 2px solid rgb(132, 0, 255);
+}
+
+.exportacion:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exportacion:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.5);
+}

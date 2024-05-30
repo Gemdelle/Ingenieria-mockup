@@ -1,0 +1,57 @@
+.container-marketing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.other-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 18vh;
+}
+
+.buttons-campaign-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 26vh;
+}
+
+.graphics-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.graphic-container{
+    margin-left: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exportar-grafico{
+    position: absolute;
+    bottom: -10vh;
+    right: -15vh;
+}
+
+.user-qr{
+    width: 40vh;
+    height: 40vh;
+    margin-bottom: 2vh;
+    border: solid 0.5vh white;
+}
+
+.user-qr.qr-img{
+    background-image: url('img/client-qr.jpg');
+    background-size: cover;
+    background-position: center;
+}
