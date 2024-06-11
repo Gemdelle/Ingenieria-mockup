@@ -37,13 +37,22 @@
 <div class="container-marketing">
     <div class="other-container">
         <div class="graphic-container">
-            <div class="user-qr video-container">
-                <video width="355px" height="360px" autoplay muted playsinline>
+            <div class="user-qr video-container" id="right-qr" style="display: none">
+                <video  width="355px" height="360px" autoplay muted playsinline>
                     <source src="img/qr_scan.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <button class="signin-btn escanear-qr" onclick="mostrarQR()">ESCANEAR QR</button>
+            <div class="user-qr video-container" id="wrong-qr" style="display: none">
+                <video  width="355px" height="360px" autoplay muted playsinline >
+                    <source src="img/qr_scan_wrong.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="buttons-scanner-container">
+                <button class="signin-btn escanear-qr" onclick="mostrarQRValido()">ESCANEAR QR Válido</button>
+                <button class="signin-btn escanear-qr" onclick="mostrarQRInvalido()">ESCANEAR QR Inválido</button>
+            </div>
         </div>
         <button class="signin-btn exportar-grafico">EXPORTAR</button>
     </div>
@@ -55,9 +64,18 @@
         window.location.href = 'empleado.html';
     }
 
-    function mostrarQR() {
-        const qr = document.querySelector('.user-qr');
-        qr.classList.add("qr-img")
+    function mostrarQRValido() {
+        const rightQR = document.getElementById('right-qr');
+        rightQR.style.display = 'block';
+        const wrongQR = document.getElementById('wrong-qr');
+        wrongQR.style.display = 'none';
+    }
+
+    function mostrarQRInvalido() {
+        const rightQR = document.getElementById('right-qr');
+        rightQR.style.display = 'none';
+        const wrongQR = document.getElementById('wrong-qr');
+        wrongQR.style.display = 'block';
     }
 </script>
 </body>
