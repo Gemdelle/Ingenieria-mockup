@@ -37,7 +37,13 @@
 <div class="container-marketing">
     <div class="other-container">
         <div class="graphic-container">
-            <div class="user-qr"></div>
+            <div class="user-qr video-container">
+                <video width="355px" height="360px" autoplay muted playsinline>
+                    <source src="img/qr_scan.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="img/qr_scanning.png" alt="Overlay Image" class="overlay">
+            </div>
             <button class="signin-btn escanear-qr" onclick="mostrarQR()">ESCANEAR QR</button>
         </div>
         <button class="signin-btn exportar-grafico">EXPORTAR</button>

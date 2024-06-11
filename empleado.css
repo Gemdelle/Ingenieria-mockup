@@ -55,3 +55,15 @@
     background-size: cover;
     background-position: center;
 }
+
+.overlay {
+    position: absolute;
+    top: 6vh;
+    left: 9vh;
+    width: 28vh;
+    height: 29vh;
+    filter: brightness(1000);
+}
+.overlay {
+    pointer-events: none;
+}

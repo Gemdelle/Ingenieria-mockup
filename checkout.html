@@ -66,25 +66,6 @@
         window.location.href = 'mercadopago.html';
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const logo = document.querySelector('.logo');
-        const buttonContainer = document.querySelector('.button-container');
-
-        logo.addEventListener('mouseover', function() {
-            if (buttonContainer.style.display === 'flex'){
-                buttonContainer.style.transform = 'translateX(-50%) translateY(-20px)';
-                buttonContainer.style.opacity = '0';
-                setTimeout(() => {
-                    buttonContainer.style.display = 'none';
-                }, 300); // match the transition duration
-            } else {
-                buttonContainer.style.display = 'flex';
-                buttonContainer.style.transform = 'translateX(-50%) translateY(0)';
-                buttonContainer.style.opacity = '1';
-            }
-        });
-    });
-
 </script>
 </body>
 </html>

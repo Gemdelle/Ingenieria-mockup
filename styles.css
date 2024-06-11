@@ -137,6 +137,14 @@ header {
     position: absolute;
     top: 0;
     right: 2rem;
+    z-index: 9999;
+}
+
+.gallery .carousel-actions{
+    position: absolute;
+    top: -5rem;
+    right: 2rem;
+    z-index: 9999;
 }
 
 .carousel-actions-container{
@@ -375,6 +383,7 @@ BUTTONS */
     background-image: url('img/level.png');
     background-size: cover;
     background-position: center;
+    cursor: pointer;
 }
 
 .button-container {
@@ -486,6 +495,7 @@ h1 {
     height: 100%;
     position: relative;
     filter: brightness(9);
+    cursor: pointer;
 }
 
 /* NEON H1 */
@@ -545,4 +555,17 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.display-none {
+    display: none;
+}
+
+td img {
+    width: 10vh;
+    height: 12vh;
+}
+
+.carousel-actions-container tr {
+    color: white;
 }
