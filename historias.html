@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="marketing.css">
+    <link rel="stylesheet" href="historias.css">
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -36,23 +36,7 @@
 
 <div class="container-marketing">
     <div class="other-container">
-        <div class="buttons-campaign-container">
-            <button class="signin-btn"onclick="mostrarBotones()">CAMPAÑA 1</button>
-            <button class="signin-btn">CAMPAÑA 2</button>
-            <button class="signin-btn">CAMPAÑA 3</button>
-            <button class="signin-btn">CAMPAÑA 4</button>
-        </div>
-        <div class="graphic-container">
-            <div class="buttons-migracion-container">
-                <button class="signin-btn registros" onclick="mostrarGraphic1()">REGISTROS</button>
-                <button class="signin-btn migracion" onclick="mostrarGraphic2()">MIGRACIÓN POR PLATAFORMA</button>
-            </div>
-            <div class="graphics-container">
-                <div class="graphic-1" ></div>
-                <div class="graphic-2" ></div>
-            </div>
-        </div>
-        <button class="signin-btn exportar-grafico">EXPORTAR</button>
+
     </div>
 </div>
 
@@ -61,28 +45,6 @@
     function irALanding() {
         window.location.href = 'index.html';
     }
-
-    function mostrarBotones() {
-        const migracion = document.querySelector('.migracion');
-        const registros = document.querySelector('.registros');
-        migracion.style.opacity = '1';
-        registros.style.opacity = '1';
-    }
-
-    function mostrarGraphic1() {
-        const graphic1 = document.querySelector('.graphic-1');
-        const graphic2 = document.querySelector('.graphic-2');
-        graphic1.style.opacity = '1';
-        graphic2.style.opacity = '0';
-    }
-
-    function mostrarGraphic2() {
-        const graphic1 = document.querySelector('.graphic-1');
-        const graphic2 = document.querySelector('.graphic-2');
-        graphic1.style.opacity = '0';
-        graphic2.style.opacity = '1';
-    }
-
 
 
 </script>

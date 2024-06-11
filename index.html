@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body class="theme-light">
 <header>
@@ -29,11 +29,11 @@
         <p>A un click de tu sala</p>
     </div>
     <div class="buttons" id="buttons-header">
-        <button class="signin-btn" onclick="mostrarPorfileButtons()">SIGN IN</button>
-        <button class="signin-btn">SIGN UP</button>
+        <button class="signin-btn" data-toggle="modal" data-target="#loginModal">INICIO DE SESIÓN</button>
+        <button class="signin-btn">REGISTRO</button>
     </div>
     <div class="profile-buttons" id="profile-header" style="display: none">
-<!--        <button class="signin-btn" onclick="irAProfile()">HISTORIAS</button>-->
+        <button class="signin-btn" onclick="irAHistorias()">HISTORIAS</button>
         <div class="avatar-container" onclick="irAProfile()"></div>
     </div>
 </header>
@@ -104,7 +104,7 @@
                         conducen por el sendero de la locura y,
                         finalmente, cae en el mundo del crimen.</td>
                     <td></td>
-                    <td><button class="action-btn edit"><i class="fa-sharp fa-regular fa-money-bill"></i></button></td>
+                    <td><button class="action-btn money-bill"><i class="fa-solid fa-money-bill"></i></button></td>
                 </tr>
                 <tr>
                     <td>Kill Bill</td>
@@ -117,7 +117,7 @@
                         sobrevivir, aunque queda en coma. Cinco años
                         después despierta, con un deseo de venganza.</td>
                     <td></td>
-                    <td><button class="action-btn edit"><i class="fa-sharp fa-regular fa-money-bill"></i></button></td>
+                    <td><button class="action-btn money-bill"><i class="fa-solid fa-money-bill"></i></button></td>
                 </tr>
                 <tr>
                     <td>Fighter</td>
@@ -134,17 +134,43 @@
                         boxeo y pese a su potente gancho de izquierda,
                         siempre acaba derrotado.</td>
                     <td></td>
-                    <td><button class="action-btn edit"><i class="fa-sharp fa-regular fa-money-bill"></i></button></td>
+                    <td><button class="action-btn money-bill"><i class="fa-solid fa-money-bill"></i></button></td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Inicio de Sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="btn btn-primary" onclick="mostrarPorfileButtons()" data-dismiss="modal">Submit</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script>
     let isVideoPlaying = false;
 
@@ -156,6 +182,10 @@
     }
     function irAMarketing(){
         window.location.href = 'marketing.html';
+    }
+
+    function irAHistorias(){
+        window.location.href = 'hisotrias.html';
     }
 
     function comprar() {
@@ -236,6 +266,7 @@
             event.preventDefault(); // Prevent sliding if a video is playing
         }
     });
+
 </script>
 </body>
 </html>

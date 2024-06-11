@@ -50,16 +50,7 @@
     border: solid 0.5vh #ffffff;
     overflow: hidden;
     border-radius: 5%;
-}
-
-video {
-    scale: 110%;
-}
-
-.user-qr.qr-img{
-    background-image: url('img/client-qr.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: white;
 }
 
 .overlay {
