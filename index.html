@@ -104,7 +104,7 @@
                         conducen por el sendero de la locura y,
                         finalmente, cae en el mundo del crimen.</td>
                     <td></td>
-                    <td><button class="action-btn money-bill"><i class="fa-solid fa-money-bill"></i></button></td>
+                    <td><button class="action-btn money-bill" onclick="comprar()"><i class="fa-solid fa-money-bill"></i></button></td>
                 </tr>
                 <tr>
                     <td>Kill Bill</td>
@@ -117,7 +117,7 @@
                         sobrevivir, aunque queda en coma. Cinco años
                         después despierta, con un deseo de venganza.</td>
                     <td></td>
-                    <td><button class="action-btn money-bill"><i class="fa-solid fa-money-bill"></i></button></td>
+                    <td><button class="action-btn money-bill" onclick="comprar()"><i class="fa-solid fa-money-bill"></i></button></td>
                 </tr>
                 <tr>
                     <td>Fighter</td>
@@ -134,7 +134,7 @@
                         boxeo y pese a su potente gancho de izquierda,
                         siempre acaba derrotado.</td>
                     <td></td>
-                    <td><button class="action-btn money-bill"><i class="fa-solid fa-money-bill"></i></button></td>
+                    <td><button class="action-btn money-bill" onclick="comprar()"><i class="fa-solid fa-money-bill"></i></button></td>
                 </tr>
                 </tbody>
             </table>
@@ -199,8 +199,8 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true" style="z-index: 99999">
-    <video id="videoPlayer" class="w-100"  autoplay muted playsinline>
+<div class="modal fade intro-video" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <video id="videoPlayer"  autoplay muted playsinline>
         <source src="img/Introduction.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -315,10 +315,10 @@
 
 
         videoPlayer.addEventListener('ended', function() {
-            const modal = document.getElementById('videoModal');
-            const modalBackdrop = document.getElementsByClassName('modal-backdrop')[0];
-            modal.style.display = 'none';
-            modalBackdrop.style.display = 'none';
+            // const modal = document.getElementById('videoModal');
+            // const modalBackdrop = document.getElementsByClassName('modal-backdrop')[0];
+            // modal.style.display = 'none';
+            // modalBackdrop.style.display = 'none';
         });
     });
 
