@@ -111,8 +111,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Cantarell;
-    font-family: Saira Condensed;
+    font-family: 'Saira Condensed', sans-serif;
     height: 100vh;
     background-image: url('img/background-1.jpg');
     background-size: cover;
@@ -455,7 +454,6 @@ BUTTONS */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgb(255, 255, 255);
     transition: transform 0.2s, box-shadow 0.2s;
     font-family: 'Saira Condensed', sans-serif;
-    width: 6vw;
 }
 
 .signin-btn:hover {
@@ -568,4 +566,11 @@ td img {
 
 .carousel-actions-container tr {
     color: white;
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }

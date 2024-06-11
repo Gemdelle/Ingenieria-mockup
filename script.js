@@ -1,7 +1,5 @@
 function mostrarPorfileButtons() {
-    // Oculta el login-screen
     document.getElementById('buttons-header').style.display = 'none';
-    // Muestra la otra pantalla
     document.getElementById('profile-header').style.display = 'flex';
 }
 
