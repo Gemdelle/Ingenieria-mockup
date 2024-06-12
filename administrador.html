@@ -20,10 +20,10 @@
     <div class="presentation">
         <div class="logo" onclick="irALanding()">Logo</div>
         <div class="button-container">
-            <button>Administrador</button>
-            <button>Marketing</button>
-            <button>Empleado</button>
-            <button>Usuario</button>
+            <button onclick="irALanding()">Administrador</button>
+            <button onclick="irAMarketing()">Marketing</button>
+            <button onclick="irAEmpleado()">Empleado</button>
+            <button onclick="irAUsuario()">Usuario</button>
         </div>
         <h1 class="neon">Cine Teatro</h1>
     </div>
@@ -54,7 +54,15 @@
             <td>pedro@gmail.com</td>
             <td>2018-07-01 03:04:00 PM</td>
             <td><span class="status success"></span></td>
-            <td><span class="admin-progress done">ADMINISTRADOR</span></td>
+            <td>
+                <select class="admin-progress doing" disabled>
+                    <option value="ADMINISTRADOR" selected>ADMINISTRADOR</option>
+                    <option value="CLIENTE" >CLIENTE</option>
+                    <option value="MARKETING">MARKETING</option>
+                    <option value="VENDEDOR POR VENTANILLA">VENDEDOR POR VENTANILLA</option>
+                    <option value="CONTROL DE ACCESO A SALAS">CONTROL DE ACCESO A SALAS</option>
+                </select>
+            </td>
         </tr>
         <tr>
             <td><input type="checkbox"></td>
@@ -63,7 +71,13 @@
             <td>2018-10-30 10:04:00 PM</td>
             <td><span class="status fail"></span></td>
             <td>
-                <span class="admin-progress doing">USUARIO</span>
+                <select class="admin-progress doing" disabled>
+                    <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    <option value="CLIENTE" selected>CLIENTE</option>
+                    <option value="MARKETING">MARKETING</option>
+                    <option value="VENDEDOR POR VENTANILLA">VENDEDOR POR VENTANILLA</option>
+                    <option value="CONTROL DE ACCESO A SALAS">CONTROL DE ACCESO A SALAS</option>
+                </select>
                 <button class="action-btn edit"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
             </td>
@@ -75,7 +89,13 @@
             <td>2018-08-10 06:04:00 AM</td>
             <td><span class="status success"></span></td>
             <td>
-                <span class="admin-progress todo">EMPLEADO</span>
+                <select class="admin-progress doing" disabled>
+                    <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    <option value="CLIENTE" >CLIENTE</option>
+                    <option value="MARKETING">MARKETING</option>
+                    <option value="VENDEDOR POR VENTANILLA" selected>VENDEDOR POR VENTANILLA</option>
+                    <option value="CONTROL DE ACCESO A SALAS">CONTROL DE ACCESO A SALAS</option>
+                </select>
                 <button class="action-btn edit"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
             </td>
@@ -87,7 +107,13 @@
             <td>2018-08-10 11:04:00 PM</td>
             <td><span class="status fail"></span></td>
             <td>
-                <span class="admin-progress todo">EMPLEADO</span>
+                <select class="admin-progress doing" disabled>
+                    <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    <option value="CLIENTE" >CLIENTE</option>
+                    <option value="MARKETING">MARKETING</option>
+                    <option value="VENDEDOR POR VENTANILLA">VENDEDOR POR VENTANILLA</option>
+                    <option value="CONTROL DE ACCESO A SALAS" selected>CONTROL DE ACCESO A SALAS</option>
+                </select>
                 <button class="action-btn edit"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
             </td>
@@ -99,7 +125,13 @@
             <td>2018-08-10 14:04:00 PM</td>
             <td><span class="status success"></span></td>
             <td>
-                <span class="admin-progress todo">USUARIO</span>
+                <select class="admin-progress doing" disabled>
+                    <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    <option value="CLIENTE" >CLIENTE</option>
+                    <option value="MARKETING" selected>MARKETING</option>
+                    <option value="VENDEDOR POR VENTANILLA">VENDEDOR POR VENTANILLA</option>
+                    <option value="CONTROL DE ACCESO A SALAS">CONTROL DE ACCESO A SALAS</option>
+                </select>
                 <button class="action-btn edit"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
             </td>
@@ -111,7 +143,13 @@
             <td>2018-08-10 03:04:00 AM</td>
             <td><span class="status success"></span></td>
             <td>
-                <span class="admin-progress todo">USUARIO</span>
+                <select class="admin-progress doing" disabled>
+                    <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    <option value="CLIENTE" selected>CLIENTE</option>
+                    <option value="MARKETING">MARKETING</option>
+                    <option value="VENDEDOR POR VENTANILLA">VENDEDOR POR VENTANILLA</option>
+                    <option value="CONTROL DE ACCESO A SALAS">CONTROL DE ACCESO A SALAS</option>
+                </select>
                 <button class="action-btn edit"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
             </td>
@@ -123,7 +161,13 @@
             <td>2018-08-10 09:04:00 PM</td>
             <td><span class="status fail"></span></td>
             <td>
-                <span class="admin-progress todo">USUARIO</span>
+                <select class="admin-progress doing" disabled>
+                    <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    <option value="CLIENTE" >CLIENTE</option>
+                    <option value="MARKETING" selected>MARKETING</option>
+                    <option value="VENDEDOR POR VENTANILLA">VENDEDOR POR VENTANILLA</option>
+                    <option value="CONTROL DE ACCESO A SALAS">CONTROL DE ACCESO A SALAS</option>
+                </select>
                 <button class="action-btn edit"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
             </td>
@@ -135,7 +179,13 @@
             <td>2018-08-10 05:04:00 PM</td>
             <td><span class="status success"></span></td>
             <td>
-                <span class="admin-progress todo">EMPLEADO</span>
+                <select class="admin-progress doing" disabled>
+                    <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    <option value="CLIENTE">CLIENTE</option>
+                    <option value="MARKETING">MARKETING</option>
+                    <option value="VENDEDOR POR VENTANILLA">VENDEDOR POR VENTANILLA</option>
+                    <option value="CONTROL DE ACCESO A SALAS" selected>CONTROL DE ACCESO A SALAS</option>
+                </select>
                 <button class="action-btn edit"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete"><i class="fas fa-trash-alt"></i></button>
             </td>
@@ -154,6 +204,17 @@
         window.location.href = 'administrador.html';
     }
 
+    function irAUsuario() {
+        window.location.href = 'index.html';
+    }
+    function irAEmpleado(){
+        window.location.href = 'empleado.html';
+    }
+
+    function irAMarketing(){
+        window.location.href = 'marketing.html';
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         const logo = document.querySelector('.logo');
         const buttonContainer = document.querySelector('.button-container');
@@ -170,6 +231,19 @@
                 buttonContainer.style.transform = 'translateX(-50%) translateY(0)';
                 buttonContainer.style.opacity = '1';
             }
+        });
+    });
+
+    document.querySelectorAll('.action-btn.edit').forEach(button => {
+        button.addEventListener('click', function() {
+            const selectElement = this.previousElementSibling;
+            selectElement.disabled = !selectElement.disabled;
+        });
+    });
+    document.querySelectorAll('.action-btn.delete').forEach(button => {
+        button.addEventListener('click', function() {
+            const row = this.closest('tr');
+            row.remove();
         });
     });
 </script>
