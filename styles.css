@@ -606,6 +606,7 @@ h1 {
     text-align: center;
     text-shadow: 0 0 5px #e0e0ff, 0 0 10px #e0e0ff, 0 0 15px #420185, 0 0 20px #420185, 0 0 30px #420185, 0 0 40px #1e90ff, 0 0 50px #1e90ff, 0 0 60px #1e90ff;
     animation: flicker 1.5s infinite alternate;
+    text-transform: uppercase;
 }
 
 @keyframes flicker {
