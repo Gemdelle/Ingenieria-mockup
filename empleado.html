@@ -38,7 +38,7 @@
     <div class="other-container">
         <div class="graphic-container">
             <div class="user-qr video-container" id="right-qr" style="display: none">
-                <video  width="355px" height="360px" autoplay muted playsinline>
+                <video id="scanVideo"  width="355px" height="360px" autoplay muted playsinline>
                     <source src="img/qr_scan.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -54,7 +54,14 @@
                 <button class="signin-btn escanear-qr" onclick="mostrarQRInvalido()">ESCANEAR QR Inválido</button>
             </div>
         </div>
-        <button class="signin-btn exportar-grafico">EXPORTAR</button>
+        <div class="datos-sala-container modal-content-web" id="scan-result">
+            <div class="titulo-sala">KILL BILL</div>
+            <div class="bajada-sala">Fecha: Lunes 27 de Agosto</div>
+            <div class="bajada-sala">Horario: 22:00hrs</div>
+            <div class="bajada-sala">Sala: 2</div>
+            <div class="bajada-sala">Butaca: C-17</div>
+            <div class="bajada-sala">Hora de Ingreso: 21:47hrs</div>
+        </div>
     </div>
 </div>
 
@@ -77,6 +84,19 @@
         const wrongQR = document.getElementById('wrong-qr');
         wrongQR.style.display = 'block';
     }
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+
+        var scanVideoPlayer = document.getElementById('scanVideo');
+
+        scanVideoPlayer.addEventListener('ended', function() {
+            document.getElementById('scan-result').classList.add('visible')
+        });
+
+    });
 </script>
 </body>
 </html>

@@ -986,6 +986,28 @@ button.signin-btn.settings-access {
     background-image: url(img/avatar/9.png);
 }
 
+.titulo-sala {
+    font-weight: bold;
+    font-size: 7vh;
+}
+
+.bajada-sala {
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+.datos-sala-container.modal-content-web.visible {
+    opacity: 1;
+}
+
+.datos-sala-container.modal-content-web {
+    height: 38vh;
+    width: 80vh;
+    color: white;
+    padding: 2vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
 .modal-content.question-content.profile-content {
     display: flex;
     flex-direction: row;
