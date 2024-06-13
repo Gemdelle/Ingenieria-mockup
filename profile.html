@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
@@ -29,13 +30,7 @@
     </div>
     <div class="profile-buttons" id="profile-header">
 <!--        <button class="signin-btn" onclick="irALanding()">LANDING</button>-->
-        <div class="avatar-container">
-            <div class="progress-bar-container">
-                <div class="progress-fill"></div>
-            </div>
-            <div class="avatar"></div>
-            <div class="avatar-level"></div>
-        </div>
+
     </div>
 </header>
     <div class="profile-container"> 
@@ -44,21 +39,20 @@
                 <div class="data-barra-interior"></div>
             </div>
             <div class="caja-data">
+                <div class="campo-xp">2880 XP</div>
+                <div class="campo-lvl">Nivel 10</div>
                 <div class="data-elementos">
-                    <div class="campo"></div>
-                    <div class="campo"></div>
-                    <div class="campo"></div>
+                    <div class="campo">Nombre: Nazareno</div>
+                    <div class="campo">Apellido: Marfil</div>
+                    <div class="campo">Correo Electrónico: naza@gmail.com</div>
                 </div>
+                <button class="signin-btn settings-access" ><i class="fas fa-wrench"></i></button>
             </div>
             <div class="data-avatar-container">
-                <div class="data-avatar"></div>
+                <div class="data-avatar" id="avatar-img" data-toggle="modal" data-target="#profileModal"></div>
             </div>
         </div>
         <div class="agregar-compra">
-            <button id="meta-1">+</button>
-            <button id="meta-2">+</button>
-            <button id="meta-3">+</button>
-            <button id="meta-4">+</button>
         </div>
         <div class="metas">
             
@@ -67,17 +61,20 @@
                         <div class="barra-progreso">
                             <div class="nombre">CINEMANÍA</div>
                             <div class="barra-exterior">
-                                <div class="barra-interior"></div>
+                                <div class="barra-interior" id="barra-en-movimiento" style="width: 10%"></div>
                             </div>
                         </div>
                         <div class="badges-progreso">
-                            <div id="a-1" class="a-badge"></div>
-                            <div id="a-2" class="a-badge"></div>
-                            <div id="a-3" class="a-badge"></div>
-                            <div id="a-4" class="a-badge"></div>
+                            <div id="a-1" class="a-badge a-inactive"></div>
+                            <div id="a-2" class="a-badge a-inactive"></div>
+                            <div id="a-3" class="a-badge a-inactive"></div>
+                            <div id="a-4" class="a-badge a-inactive"></div>
                         </div>
                 </div>
-                <div class="mensaje"></div>
+                <div class="mensaje">
+                    <div class="titulo-meta">Se progresa con la realización de compras</div>
+                    <div class="bajada-meta">¡Adquiera una o más entradas en su próxima compra y acceda a un beneficio exclusivo!</div>
+                </div>
             </div>
 
             <div class="meta">
@@ -85,17 +82,20 @@
                         <div class="barra-progreso">
                             <div class="nombre">ACOMPAÑADO</div>
                             <div class="barra-exterior">
-                                <div class="barra-interior"></div>
+                                <div class="barra-interior" style="width: 30%"></div>
                             </div>
                         </div>
                         <div class="badges-progreso">
-                            <div id="b-1" class="a-badge"></div>
-                            <div id="b-2" class="a-badge"></div>
-                            <div id="b-3" class="a-badge"></div>
-                            <div id="b-4" class="a-badge"></div>
+                            <div id="b-1" class="a-badge active-badge"></div>
+                            <div id="b-2" class="a-badge active-badge"></div>
+                            <div id="b-3" class="a-badge active-badge"></div>
+                            <div id="b-4" class="a-badge b-inactive"></div>
                         </div>
                 </div>
-                <div class="mensaje"></div>
+                <div class="mensaje">
+                    <div class="titulo-meta">Se progresa con la compra de más de una entrada por transacción</div>
+                    <div class="bajada-meta">¡Adquiera más de una entrada en su próxima compra y acceda a un beneficio exclusivo!</div>
+                </div>
             </div>
 
             <div class="meta">
@@ -103,17 +103,20 @@
                         <div class="barra-progreso">
                             <div class="nombre">MARTES DE CINE</div>
                             <div class="barra-exterior">
-                                <div class="barra-interior"></div>
+                                <div class="barra-interior" style="width: 70%"></div>
                             </div>
                         </div>
                         <div class="badges-progreso">
-                            <div id="c-1" class="a-badge"></div>
-                            <div id="c-2" class="a-badge"></div>
-                            <div id="c-3" class="a-badge"></div>
-                            <div id="c-4" class="a-badge"></div>
+                            <div id="c-1" class="a-badge active-badge"></div>
+                            <div id="c-2" class="a-badge c-inactive"></div>
+                            <div id="c-3" class="a-badge c-inactive"></div>
+                            <div id="c-4" class="a-badge c-inactive"></div>
                         </div>
                 </div>
-                <div class="mensaje"></div>
+                <div class="mensaje">
+                    <div class="titulo-meta">Se progresa con la realización de compras los días martes</div>
+                    <div class="bajada-meta">¡Adquiera una o más entradas el día martes en su próxima compra para acceder a un beneficio exclusivo!</div>
+                </div>
             </div>
 
             <div class="meta">
@@ -121,25 +124,164 @@
                         <div class="barra-progreso">
                             <div class="nombre">PREGUNTA DEL DÍA</div>
                             <div class="barra-exterior">
-                                <div class="barra-interior"></div>
+                                <div class="barra-interior" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="badges-progreso">
-                            <div id="d-1" class="a-badge"></div>
-                            <div id="d-2" class="a-badge"></div>
-                            <div id="d-3" class="a-badge"></div>
-                            <div id="d-4" class="a-badge"></div>
+                            <div id="d-1" class="a-badge active-badge"></div>
+                            <div id="d-2" class="a-badge active-badge"></div>
+                            <div id="d-3" class="a-badge d-inactive"></div>
+                            <div id="d-4" class="a-badge d-inactive"></div>
                         </div>
                 </div>
-                <div class="mensaje"></div>
+                <div class="mensaje">
+                    <div class="titulo-meta">Se progresa con la victoria en el juego Pregunta del Día</div>
+                    <div class="bajada-meta">¡Obtenga la victoria al jugar Pregunta del Día para acceder a un beneficio exclusivo!</div>
+                </div>
             </div>
         </div>
     </div>
+<div class="modal fade profile-modal question-modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content question-content profile-content">
+            <div class="avatar-profile data-avatar" onclick="changeAvatar1()"></div>
+            <div class="avatar-profile data-avatar2" onclick="changeAvatar2()"></div>
+            <div class="avatar-profile data-avatar3" onclick="changeAvatar3()"></div>
+            <div class="avatar-profile data-avatar4" onclick="changeAvatar4()"></div>
+            <div class="avatar-profile data-avatar5" onclick="changeAvatar5()"></div>
+            <div class="avatar-profile data-avatar6" onclick="changeAvatar6()"></div>
+            <div class="avatar-profile data-avatar7" onclick="changeAvatar7()"></div>
+            <div class="avatar-profile data-avatar8" onclick="changeAvatar8()"></div>
+            <div class="avatar-profile data-avatar9" onclick="changeAvatar9()"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
 
     function irALanding() {
         window.location.href = 'index.html';
     }
+
+    function removeAllClasses() {
+        document.getElementById('avatar-img').classList.forEach(function (element) {
+            document.getElementById('avatar-img').classList.remove(element)
+        })
+    }
+
+    function changeAvatar1() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar')
+    }
+
+    function changeAvatar2() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar2')
+    }
+
+    function changeAvatar3() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar3')
+    }
+
+    function changeAvatar4() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar4')
+    }
+
+    function changeAvatar5() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar5')
+    }
+
+    function changeAvatar6() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar6')
+    }
+
+    function changeAvatar7() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar7')
+    }
+
+    function changeAvatar8() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar8')
+    }
+
+    function changeAvatar9() {
+        removeAllClasses();
+        document.getElementById('avatar-img').classList.add('data-avatar9')
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const handleEscape = function(event) {
+            if (event.key === 'Escape') {
+                setTimeout(function (){
+                    document.getElementById('barra-en-movimiento').style.width = '20%'
+                    setTimeout(function (){
+                        document.getElementById('barra-en-movimiento').style.width = '50%'
+                        setTimeout(function (){
+                            document.getElementById('barra-en-movimiento').style.width = '80%'
+                            setTimeout(function (){
+                                document.getElementById('barra-en-movimiento').style.width = '100%'
+                                document.getElementById('a-1').classList.remove('a-inactive')
+                                document.getElementById('a-1').classList.add('active-badge')
+                                setTimeout(function (){
+                                    document.getElementById('barra-en-movimiento').style.width = '0%'
+                                    setTimeout(function (){
+                                        document.getElementById('barra-en-movimiento').style.width = '20%'
+                                        setTimeout(function (){
+                                            document.getElementById('barra-en-movimiento').style.width = '80%'
+                                            setTimeout(function (){
+                                                document.getElementById('barra-en-movimiento').style.width = '100%'
+                                                document.getElementById('a-2').classList.remove('a-inactive')
+                                                document.getElementById('a-2').classList.add('active-badge')
+                                                setTimeout(function (){
+                                                    document.getElementById('barra-en-movimiento').style.width = '0%'
+                                                    setTimeout(function (){
+                                                        document.getElementById('barra-en-movimiento').style.width = '30%'
+                                                        setTimeout(function (){
+                                                            document.getElementById('barra-en-movimiento').style.width = '90%'
+                                                            setTimeout(function (){
+                                                                document.getElementById('barra-en-movimiento').style.width = '100%'
+                                                                document.getElementById('a-3').classList.remove('a-inactive')
+                                                                document.getElementById('a-3').classList.add('active-badge')
+                                                                setTimeout(function (){
+                                                                    document.getElementById('barra-en-movimiento').style.width = '0%'
+                                                                    setTimeout(function (){
+                                                                        document.getElementById('barra-en-movimiento').style.width = '40%'
+                                                                        setTimeout(function (){
+                                                                            document.getElementById('barra-en-movimiento').style.width = '70%'
+                                                                            setTimeout(function (){
+                                                                                document.getElementById('barra-en-movimiento').style.width = '100%'
+                                                                                document.getElementById('a-4').classList.remove('a-inactive')
+                                                                                document.getElementById('a-4').classList.add('active-badge')
+                                                                            },500)
+                                                                        },500)
+                                                                    },500)
+                                                                },500)
+                                                            },500)
+                                                        },500)
+                                                    },500)
+                                                },500)
+                                            },500)
+                                        },500)
+                                    },500)
+                                },500)
+                            },500)
+                        },500)
+                    },500)
+                },500)
+            }
+        };
+
+        document.addEventListener('keydown', handleEscape);
+    });
 
 </script>
 </body>

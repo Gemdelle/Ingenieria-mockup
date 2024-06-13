@@ -15,11 +15,11 @@
 </head>
 <body class="theme-light">
 <header>
-    <!-- <div class="globo globo-1 slow"></div>
-    <div class="globo globo-2 fast"></div>
-    <div class="globo globo-3 slow"></div>
-    <div class="globo globo-4 fast"></div>
-    <div class="globo globo-5 slow"></div> -->
+    <div class="globo globo-1 slow display-none"></div>
+    <div class="globo globo-2 fast display-none"></div>
+    <div class="globo globo-3 slow display-none"></div>
+    <div class="globo globo-4 fast display-none"></div>
+    <div class="globo globo-5 slow display-none"></div>
     <div class="presentation">
         <div class="logo" onclick="irALanding()">Logo</div>
         <div class="button-container">
@@ -34,6 +34,7 @@
         <p>A un click de tu sala</p>
     </div>
     <div class="buttons" id="buttons-header">
+        <button class="signin-btn" onclick="irAFAQs()">FAQs</button>
         <button class="signin-btn" data-toggle="modal" data-target="#loginModal">INICIO DE SESIÓN</button>
         <button class="signin-btn" data-toggle="modal" data-target="#registerModal">REGISTRO</button>
     </div>
@@ -45,6 +46,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
+        <button class="signin-btn question-access slow" id="question-access" data-toggle="modal" data-target="#questionModal"><i class="fas fa-question"></i></button>
         <div class="col-md-18 carousel-actions-container carousel" id="carousel">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -67,16 +69,16 @@
                         <img src="img/image03.jpg" class="d-block carousel-image" alt="Imagen 3" data-class-name="fighter-description" data-video-id="lAVYll_wBeY" data-language="Idioma: Francés" data-subtitles="Sub: Español">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/image04.png" class="d-block carousel-image" alt="Imagen 3" data-class-name="avatar-description" data-video-id="lAVYll_wBeY" data-language="Idioma: Francés" data-subtitles="Sub: Español">
+                        <img src="img/image04.png" class="d-block carousel-image" alt="Imagen 3" data-class-name="avatar-description" data-video-id="aVdO-cx-McA" data-language="Idioma: Francés" data-subtitles="Sub: Español">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/image05.png" class="d-block carousel-image" alt="Imagen 3" data-class-name="pan-description" data-video-id="lAVYll_wBeY" data-language="Idioma: Francés" data-subtitles="Sub: Español">
+                        <img src="img/image05.png" class="d-block carousel-image" alt="Imagen 3" data-class-name="pan-description" data-video-id="jVZRnnVSQ8k" data-language="Idioma: Francés" data-subtitles="Sub: Español">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/image06.png" class="d-block carousel-image" alt="Imagen 3" data-class-name="chihiro-description" data-video-id="lAVYll_wBeY" data-language="Idioma: Francés" data-subtitles="Sub: Español">
+                        <img src="img/image06.png" class="d-block carousel-image" alt="Imagen 3" data-class-name="chihiro-description" data-video-id="0Fobamq5NdM" data-language="Idioma: Francés" data-subtitles="Sub: Español">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/image07.png" class="d-block carousel-image" alt="Imagen 3" data-class-name="it-description" data-video-id="lAVYll_wBeY" data-language="Idioma: Francés" data-subtitles="Sub: Español">
+                        <img src="img/image07.png" class="d-block carousel-image" alt="Imagen 3" data-class-name="it-description" data-video-id="xKJmEC5ieOk" data-language="Idioma: Francés" data-subtitles="Sub: Español">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -115,7 +117,7 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Joker</td>
+                        <td><b>Joker</b></td>
                         <td></td>
                         <td><img src="img/image01.jpg" class="d-block carousel-image" alt="Imagen 1"></td>
                         <td></td>
@@ -129,7 +131,7 @@
                         <td><button class="action-btn money-bill signin-btn registros" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
                     </tr>
                     <tr>
-                        <td>Kill Bill</td>
+                        <td><b>Kill Bill</b></td>
                         <td></td>
                         <td><img src="img/image02.jpg" class="d-block carousel-image" alt="Imagen 1"></td>
                         <td></td>
@@ -139,10 +141,10 @@
                             sobrevivir, aunque queda en coma. Cinco años
                             después despierta, con un deseo de venganza.</td>
                         <td></td>
-                        <td><button class="action-btn money-bill" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
+                        <td><button class="action-btn money-bill signin-btn registros" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
                     </tr>
                     <tr>
-                        <td>Fighter</td>
+                        <td><b>Fighter</b></td>
                         <td></td>
                         <td><img src="img/image03.jpg" class="d-block carousel-image" alt="Imagen 1"></td>
                         <td></td>
@@ -156,43 +158,43 @@
                             boxeo y pese a su potente gancho de izquierda,
                             siempre acaba derrotado.</td>
                         <td></td>
-                        <td><button class="action-btn money-bill" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
+                        <td><button class="action-btn money-bill signin-btn registros" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
                     </tr>
                     <tr>
-                        <td>Avatar</td>
+                        <td><b>Avatar</b></td>
                         <td></td>
                         <td><img src="img/image04.png" class="d-block carousel-image" alt="Imagen 1"></td>
                         <td></td>
                         <td>En un exuberante planeta llamado Pandora viven los Na'vi, seres que aparentan ser primitivos pero que en realidad son muy evolucionados. Debido a que el ambiente de Pandora es venenoso, los híbridos humanos/Na'vi, llamados Avatares, están relacionados con las mentes humanas, lo que les permite moverse libremente por Pandora. Jake Sully, un exinfante de marina paralítico se transforma a través de un Avatar, y se enamora de una mujer Na'vi.</td>
                         <td></td>
-                        <td><button class="action-btn money-bill" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
+                        <td><button class="action-btn money-bill signin-btn registros" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
                     </tr>
                     <tr>
-                        <td>Pan's Labyrinth</td>
+                        <td><b>Pan's Labyrinth</b></td>
                         <td></td>
                         <td><img src="img/image05.png" class="d-block carousel-image" alt="Imagen 1"></td>
                         <td></td>
                         <td>En la España de 1944, la joven Ofelia y su madre enferma llegan al lugar en el que se encuentra el nuevo esposo de su madre, un sádico oficial del Ejército que intenta aplastar el levantamiento de una guerrilla. Mientras explora un antiguo laberinto, Ofelia conoce al fauno Pan, quien le dice que ella es una legendaria princesa perdida y debe completar tres peligrosas tareas para obtener la inmortalidad.</td>
                         <td></td>
-                        <td><button class="action-btn money-bill" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
+                        <td><button class="action-btn money-bill signin-btn registros" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
                     </tr>
                     <tr>
-                        <td>Chihiro</td>
+                        <td><b>Chihiro</b></td>
                         <td></td>
                         <td><img src="img/image06.png" class="d-block carousel-image" alt="Imagen 1"></td>
                         <td></td>
                         <td>Chihiro es una niña de diez años caprichosa y testaruda que cree que el universo entero debe someterse a sus deseos. Camino de su nuevo hogar junto a sus padres, una idea que la enfurece, la familia se equivoca de camino y aparece al final de un misterioso callejón sin salida, donde topan con un extraño edificio con un largo pasaje que los conduce a un pueblo fantasmal donde los espera un magnífico banquete.</td>
                         <td></td>
-                        <td><button class="action-btn money-bill" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
+                        <td><button class="action-btn money-bill signin-btn registros" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
                     </tr>
                     <tr>
-                        <td>IT</td>
+                        <td><b>IT</b></td>
                         <td></td>
                         <td><img src="img/image07.png" class="d-block carousel-image" alt="Imagen 1"></td>
                         <td></td>
                         <td>IT Varios niños de una pequeña ciudad del estado de Maine se alían para combatir a una entidad diabólica que adopta la forma de un payaso y desde hace mucho tiempo emerge cada 27 años para saciarse de sangre infantil.</td>
                         <td></td>
-                        <td><button class="action-btn money-bill" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
+                        <td><button class="action-btn money-bill signin-btn registros" onclick="comprar()"><i class="fas fa-money-bill"></i></button></td>
                     </tr>
                     </tbody>
                 </table>
@@ -202,7 +204,7 @@
 </div>
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content modal-content-web login-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="loginModalLabel">Inicio de Sesión</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -219,7 +221,7 @@
                         <label for="password">Contraseña</label>
                         <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
-                    <div class="btn btn-primary" onclick="mostrarPorfileButtonsPostLogin()" data-dismiss="modal">ENVIAR</div>
+                    <div class="btn signin-btn" onclick="mostrarPorfileButtonsPostLogin()" data-dismiss="modal">ENVIAR</div>
                 </form>
             </div>
         </div>
@@ -227,7 +229,7 @@
 </div>
 <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content modal-content-web register-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="registerModalLabel">Registro</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -252,7 +254,7 @@
                         <label for="birthdate">Fecha de nacimiento</label>
                         <input type="date" class="form-control" id="birthdate">
                     </div>
-                    <div class="btn btn-primary" onclick="mostrarPorfileButtonsPostRegister()" data-dismiss="modal">REGISTRAR</div>
+                    <div class="btn signin-btn" onclick="mostrarPorfileButtonsPostRegister()" data-dismiss="modal">REGISTRAR</div>
                 </form>
             </div>
         </div>
@@ -263,6 +265,37 @@
         <source src="img/Introduction.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+</div>
+
+<div class="modal fade question-modal" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-web question-content">
+            <div class="question-image-container">
+                <div class="question-image"></div>
+                <div class="wrong-answer display-none" id="wrong-answer">INCORRECTO</div>
+                <div class="right-answer display-none" id="right-answer">CORRECTO</div>
+            </div>
+            <div class="question-answers-container">
+                <div class="question">¿Cómo se llama la mascota de tres cabezas que custodia la trampa en la primera película, "Harry Potter y la Piedra Filosofal"?</div>
+                <div class="answers-container">
+                    <div class="answer" id="answer1" onclick="answer1(event)">Norberta</div>
+                    <div class="answer" id="answer2" onclick="answer2(event)">Fluffy</div>
+                    <div class="answer" id="answer3" onclick="answer3(event)">Fang</div>
+                    <div class="answer" id="answer4" onclick="answer4(event)">Hedwig</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade birthday-modal question-modal" id="birthdayModal" tabindex="-1" role="dialog" aria-labelledby="birthdayModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content question-content birthday-content">
+            <video id="videoBirthdayPlayer" class="birthday-player"  autoplay muted playsinline>
+                <source src="img/Birthday.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
 </div>
 <script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -296,6 +329,62 @@
 
     function irAProfile() {
         window.location.href = 'profile.html';
+    }
+
+    function irAFAQs() {
+        window.location.href = 'faqs.html';
+    }
+
+    function answer1(event) {
+        if(document.querySelectorAll('.wrong').length > 0)
+            return
+        if(document.querySelectorAll('.right').length > 0)
+            return
+        event.currentTarget.classList.add('wrong');
+        document.getElementById('wrong-answer').style.display = 'flex'
+        closeQuestion();
+    }
+
+    function answer2(event) {
+        if(document.querySelectorAll('.wrong').length > 0)
+            return
+        if(document.querySelectorAll('.right').length > 0)
+            return
+        event.currentTarget.classList.add('right');
+        document.getElementById('right-answer').style.display = 'flex'
+        closeQuestion();
+    }
+
+    function answer3(event) {
+        if(document.querySelectorAll('.wrong').length > 0)
+            return
+        if(document.querySelectorAll('.right').length > 0)
+            return
+        event.currentTarget.classList.add('wrong');
+        document.getElementById('wrong-answer').style.display = 'flex'
+        closeQuestion();
+    }
+
+    function answer4(event) {
+        if(document.querySelectorAll('.wrong').length > 0)
+            return
+        if(document.querySelectorAll('.right').length > 0)
+            return
+        event.currentTarget.classList.add('wrong');
+        document.getElementById('wrong-answer').style.display = 'flex'
+        closeQuestion();
+    }
+
+    function closeQuestion() {
+        setTimeout(function () {
+            const questionAccess = document.getElementById('question-access');
+            questionAccess.parentNode.removeChild(questionAccess);
+            const modal = document.getElementById('questionModal');
+            [...document.getElementsByClassName('modal-backdrop')].forEach(function (element) {
+                element.parentNode.removeChild(element);
+            });
+            modal.style.display = 'none';
+        }, 2000)
     }
 
     function vistaCarousel() {
@@ -372,12 +461,22 @@
 
         var videoPlayer = document.getElementById('videoPlayer');
 
-
         videoPlayer.addEventListener('ended', function() {
             const modal = document.getElementById('videoModal');
-            const modalBackdrop = document.getElementsByClassName('modal-backdrop')[0];
             modal.style.display = 'none';
-            modalBackdrop.style.display = 'none';
+            [...document.getElementsByClassName('modal-backdrop')].forEach(function (element) {
+                element.parentNode.removeChild(element);
+            });
+        });
+
+        var videoBirthdayPlayer = document.getElementById('videoBirthdayPlayer');
+
+        videoBirthdayPlayer.addEventListener('ended', function() {
+            const modal = document.getElementById('birthdayModal');
+            modal.style.display = 'none';
+            [...document.getElementsByClassName('modal-backdrop')].forEach(function (element) {
+                element.parentNode.removeChild(element);
+            });
         });
     });
 

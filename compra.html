@@ -43,8 +43,18 @@
         <div class="buy-preview-container">
             <div class="buy-preview"></div>
             <div class="position-absolute sub-language-container">
-                <button class="btn btn-light" id="languageButton">Idioma: Español</button>
-                <button class="btn btn-light" id="subtitlesButton">Sin Sub</button>
+                <select class="admin-progress doing signin-btn selector">
+                    <option value="Español">Idioma: Español</option>
+                    <option value="Inglés">Idioma: Inglés</option>
+                    <option value="Francés">Idioma: Francés</option>
+                    <option value="Alemán">Idioma: Alemán</option>
+                </select>
+                <select class="admin-progress doing signin-btn selector">
+                    <option value="Español">Sub: Español</option>
+                    <option value="Inglés">Sub: Inglés</option>
+                    <option value="Francés">Sub: Francés</option>
+                    <option value="Sin Sub">Sin Sub</option>
+                </select>
             </div>
         </div>
         <div class="selections-container">
@@ -59,40 +69,40 @@
                 <div class="dias-text">Dias</div>
                 <div class="dias-habiles-container">
                     <div class="fila-dias">
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
+                        <div class="day-empty" onclick="selectCell()">1</div>
+                        <div class="day-empty" onclick="selectCell()">2</div>
+                        <div class="day-empty" onclick="selectCell()">3</div>
+                        <div class="day-empty" onclick="selectCell()">4</div>
+                        <div class="day-empty" onclick="selectCell()">5</div>
+                        <div class="day-empty" onclick="selectCell()">6</div>
+                        <div class="day-empty" onclick="selectCell()">7</div>
+                        <div class="day-empty" onclick="selectCell()">8</div>
+                        <div class="day-empty" onclick="selectCell()">9</div>
+                        <div class="day-empty" onclick="selectCell()">10</div>
                     </div>
                     <div class="fila-dias">
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-light" onclick="selectCell()"></div>
-                        <div class="day-light" onclick="selectCell()"></div>
-                        <div class="day-light" onclick="selectCell()"></div>
-                        <div class="day-light" onclick="selectCell()"></div>
-                        <div class="day-light" onclick="selectCell()"></div>
+                        <div class="day-empty" onclick="selectCell()">11</div>
+                        <div class="day-empty" onclick="selectCell()">12</div>
+                        <div class="day-empty" onclick="selectCell()">13</div>
+                        <div class="day-empty" onclick="selectCell()">14</div>
+                        <div class="day-empty" onclick="selectCell()">15</div>
+                        <div class="day-light" onclick="selectCell()">16</div>
+                        <div class="day-light" onclick="selectCell()">17</div>
+                        <div class="day-light" onclick="selectCell()">18</div>
+                        <div class="day-light" onclick="selectCell()">19</div>
+                        <div class="day-light" onclick="selectCell()">20</div>
                     </div>
                     <div class="fila-dias">
-                        <div class="day-light" onclick="selectCell()"></div>
-                        <div class="day-light" onclick="selectCell()"></div>
-                        <div class="day-light" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
-                        <div class="day-empty" onclick="selectCell()"></div>
+                        <div class="day-light" onclick="selectCell()">21</div>
+                        <div class="day-light" onclick="selectCell()">22</div>
+                        <div class="day-light" onclick="selectCell()">23</div>
+                        <div class="day-empty" onclick="selectCell()">24</div>
+                        <div class="day-empty" onclick="selectCell()">25</div>
+                        <div class="day-empty" onclick="selectCell()">26</div>
+                        <div class="day-empty" onclick="selectCell()">27</div>
+                        <div class="day-empty" onclick="selectCell()">28</div>
+                        <div class="day-empty" onclick="selectCell()">29</div>
+                        <div class="day-empty" onclick="selectCell()">30</div>
                     </div>
                 </div>
             </div>
@@ -100,25 +110,32 @@
                 <div class="horarios-text">Horarios</div>
                 <div class="selector-horarios-container">
                     <div class="fila-horarios">
-                        <div class="horario-azul" onclick="selectCell()"></div>
-                        <div class="horario-azul" onclick="selectCell()"></div>
-                        <div class="horario-azul" onclick="selectCell()"></div>
-                        <div class="horario-azul" onclick="selectCell()"></div>
-                        <div class="horario-azul" onclick="selectCell()"></div>
+                        <div class="horario-azul" onclick="selectCell()">13:00</div>
+                        <div class="horario-azul" onclick="selectCell()">13:00</div>
+                        <div class="horario-azul" onclick="selectCell()">13:00</div>
+                        <div class="horario-azul" onclick="selectCell()">13:00</div>
+                        <div class="horario-azul" onclick="selectCell()">13:00</div>
                     </div>
                     <div class="fila-horarios">
-                        <div class="horario-light" onclick="selectCell()"></div>
-                        <div class="horario-light" onclick="selectCell()"></div>
-                        <div class="horario-light" onclick="selectCell()"></div>
-                        <div class="horario-light" onclick="selectCell()"></div>
-                        <div class="horario-light" onclick="selectCell()"></div>
+                        <div class="horario-light" onclick="selectCell()">15:50</div>
+                        <div class="horario-light" onclick="selectCell()">15:50</div>
+                        <div class="horario-light" onclick="selectCell()">15:50</div>
+                        <div class="horario-light" onclick="selectCell()">15:50</div>
+                        <div class="horario-light" onclick="selectCell()">15:50</div>
                     </div>
                     <div class="fila-horarios">
-                        <div class="horario-light" onclick="selectCell()"></div>
-                        <div class="horario-light" onclick="selectCell()"></div>
-                        <div class="horario-light" onclick="selectCell()"></div>
-                        <div class="horario-light" onclick="selectCell()"></div>
-                        <div class="horario-light" onclick="selectCell()"></div>
+                        <div class="horario-light" onclick="selectCell()">19:10</div>
+                        <div class="horario-light" onclick="selectCell()">19:10</div>
+                        <div class="horario-light" onclick="selectCell()">19:10</div>
+                        <div class="horario-light" onclick="selectCell()">19:10</div>
+                        <div class="horario-light" onclick="selectCell()">19:10</div>
+                    </div>
+                    <div class="fila-horarios">
+                        <div class="horario-light" onclick="selectCell()">22:00</div>
+                        <div class="horario-light" onclick="selectCell()">22:00</div>
+                        <div class="horario-light" onclick="selectCell()">22:00</div>
+                        <div class="horario-light" onclick="selectCell()">22:00</div>
+                        <div class="horario-light" onclick="selectCell()">22:00</div>
                     </div>
                 </div>
                 <button class="signin-btn btn-siguiente" onclick="irAAsientos()">SIGUIENTE</button>

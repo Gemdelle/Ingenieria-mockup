@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Monoton&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="faqs.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="theme-light">
+<header>
+    <div class="presentation">
+        <div class="logo" onclick="irALanding()">Logo</div>
+        <h1 class="neon">CINE TEATRO</h1>
+    </div>
+    <div class="slogan">
+        <p>A un click de tu sala</p>
+    </div>
+    <div class="buttons" id="buttons-header">
+        <button class="signin-btn">FAQs</button>
+        <button class="signin-btn" data-toggle="modal" data-target="#loginModal">INICIO DE SESIÓN</button>
+        <button class="signin-btn" data-toggle="modal" data-target="#registerModal">REGISTRO</button>
+    </div>
+    <div class="profile-buttons" id="profile-header" style="display: none">
+        <button class="signin-btn" onclick="irAHistorias()">HISTORIAS</button>
+        <div class="avatar-container" onclick="irAProfile()"></div>
+    </div>
+</header>
+
+<div class="container faqs">
+    <h1>Preguntas Frecuentes</h1>
+    <div class="faq-list">
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(1)">1. ¿Cómo puedo comprar entradas?</div>
+            <div class="faq-answer" id="faq1">Para comprar entradas, simplemente selecciona la película y el horario que prefieras, y sigue las instrucciones para realizar el pago.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(2)">2. ¿Necesito una cuenta para comprar entradas?</div>
+            <div class="faq-answer" id="faq2">No necesitas una cuenta para comprar entradas, pero crear una cuenta te permite progresar en nuestro sistema de fidelidad y obtener descuentos.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(3)">3. ¿Cómo puedo recuperar mi contraseña?</div>
+            <div class="faq-answer" id="faq3">Puedes recuperar tu contraseña haciendo clic en "¿Olvidaste tu contraseña?" en la página de inicio de sesión y siguiendo las instrucciones.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(4)">4. ¿Puedo cambiar mi información personal?</div>
+            <div class="faq-answer" id="faq4">Sí, puedes cambiar tu información personal desde la sección "Mi Perfil" una vez que hayas iniciado sesión.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(5)">5. ¿Cómo funciona el sistema de fidelidad?</div>
+            <div class="faq-answer" id="faq5">El sistema de fidelidad te permite acumular puntos por cada compra y actividad en nuestra web, los cuales puedes canjear por descuentos y premios.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(6)">6. ¿Cómo puedo ver mis puntos de fidelidad?</div>
+            <div class="faq-answer" id="faq6">Puedes ver tus puntos de fidelidad en la sección "Mi Perfil" dentro de tu cuenta.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(7)">7. ¿Puedo usar mis puntos de fidelidad para comprar entradas?</div>
+            <div class="faq-answer" id="faq7">Sí, puedes canjear tus puntos de fidelidad por descuentos en la compra de entradas.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(8)">8. ¿Qué métodos de pago aceptan?</div>
+            <div class="faq-answer" id="faq8">Aceptamos tarjetas de crédito, débito y pagos a través de PayPal.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(9)">9. ¿Puedo cancelar o cambiar mis entradas?</div>
+            <div class="faq-answer" id="faq9">Sí, puedes cancelar o cambiar tus entradas hasta 24 horas antes de la función programada.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(10)">10. ¿Qué hago si tengo problemas con mi compra?</div>
+            <div class="faq-answer" id="faq10">Si tienes problemas con tu compra, contacta a nuestro servicio de atención al cliente a través de la sección "Contacto" en nuestra web.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(11)">11. ¿Hay descuentos para estudiantes?</div>
+            <div class="faq-answer" id="faq11">Sí, ofrecemos descuentos para estudiantes. Deberás presentar una identificación válida en la taquilla al recoger tus entradas.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(12)">12. ¿Puedo comprar entradas para funciones futuras?</div>
+            <div class="faq-answer" id="faq12">Sí, puedes comprar entradas para funciones futuras, generalmente disponibles con un mes de anticipación.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(13)">13. ¿Cómo sé si mi compra fue exitosa?</div>
+            <div class="faq-answer" id="faq13">Recibirás un correo electrónico de confirmación con los detalles de tu compra. También puedes verificar el estado de tu compra en la sección "Mis Compras" dentro de tu cuenta.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(14)">14. ¿Ofrecen funciones en otros idiomas?</div>
+            <div class="faq-answer" id="faq14">Sí, ofrecemos funciones en varios idiomas. Consulta la cartelera para ver las opciones disponibles.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(15)">15. ¿Cómo puedo suscribirme al boletín informativo?</div>
+            <div class="faq-answer" id="faq15">Puedes suscribirte a nuestro boletín informativo ingresando tu correo electrónico en el formulario de suscripción en nuestra página de inicio.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(16)">16. ¿Qué beneficios tengo al suscribirme al boletín informativo?</div>
+            <div class="faq-answer" id="faq16">Al suscribirte a nuestro boletín informativo, recibirás noticias sobre estrenos, promociones exclusivas y descuentos especiales.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(17)">17. ¿Puedo reservar asientos específicos?</div>
+            <div class="faq-answer" id="faq17">Sí, puedes seleccionar asientos específicos al momento de comprar tus entradas en nuestra web.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(18)">18. ¿Cómo puedo darme de baja del sistema de fidelidad?</div>
+            <div class="faq-answer" id="faq18">Para darte de baja del sistema de fidelidad, por favor contacta a nuestro servicio de atención al cliente y ellos te asistirán en el proceso.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(19)">19. ¿Puedo transferir mis puntos de fidelidad a otra cuenta?</div>
+            <div class="faq-answer" id="faq19">No, los puntos de fidelidad no son transferibles y solo pueden ser utilizados por la cuenta que los ha acumulado.</div>
+        </div>
+
+        <div class="faq-section">
+            <div class="faq-question" onclick="toggleAnswer(20)">20. ¿Cómo puedo contactar al servicio de atención al cliente?</div>
+            <div class="faq-answer" id="faq20">Puedes contactar al servicio de atención al cliente a través de la sección "Contacto" en nuestra web o llamando al número de teléfono proporcionado allí.</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+    function irAHistorias(){
+        window.location.href = 'hisotrias.html';
+    }
+
+    function toggleAnswer(faqId) {
+        var answer = document.getElementById('faq' + faqId);
+        if (answer.style.display === 'none' || answer.style.display === '') {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    }
+
+    function irALanding() {
+        window.location.href = 'index.html';
+    }
+
+    function irAProfile() {
+        window.location.href = 'profile.html';
+    }
+
+</script>
+</body>
+</html>

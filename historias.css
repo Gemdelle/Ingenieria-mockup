@@ -1,0 +1,415 @@
+.historias-container{
+
+}
+
+.historia {
+    width: 109vh;
+}
+.historia .carousel-item {
+    width: 109vh;
+}
+
+.actions-container {
+    position: absolute;
+    right: 2vh;
+    bottom: 7vh;
+    z-index: 999999;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.g-wrap:nth-child(2) li {
+    opacity: .1;
+}
+
+.g-wrap {
+    position: relative;
+    width: 6vh;
+    height: 6vh;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.g-wrap::before {
+    content: "❤️";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6vh;
+    height: 6vh;
+    line-height: 50px;
+    font-size: 3vh;
+    text-align: center;
+    z-index: -1;
+    user-select: none;
+    transition: 0.1s;
+}
+.g-wrap:active::before {
+    transform: scale(1.1);
+}
+
+
+.favourite:nth-child(2) li {
+    opacity: .1;
+}
+
+.favourite {
+    position: relative;
+    width: 6vh;
+    height: 6vh;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.favourite::before {
+    content: "⭐";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6vh;
+    height: 6vh;
+    line-height: 50px;
+    font-size: 3vh;
+    text-align: center;
+    filter: grayscale(1);
+    z-index: -1;
+    user-select: none;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.favourite:active::before {
+    transform: scale(1.1);
+}
+
+.favourite.active::before {
+    filter: none;
+}
+
+.comentarios:nth-child(2) li {
+    opacity: .1;
+}
+
+.comentarios {
+    position: relative;
+    width: 6vh;
+    height: 6vh;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.comentarios::before {
+    content: "💬";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6vh;
+    height: 6vh;
+    line-height: 50px;
+    font-size: 3vh;
+    text-align: center;
+    z-index: -1;
+    user-select: none;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.comentarios:active::before {
+    transform: scale(1.1);
+}
+
+.reels-button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgb(255, 255, 255);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.reels-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgb(247, 0, 255);/* Ajusta el brillo al pasar el mouse */
+    border: 2px solid rgb(132, 0, 255);
+    color: white!important;
+}
+
+.reels-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reels-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.5);
+}
+
+@keyframes move {
+    100% {
+        transform: rotate(0) translate(0, -250px);
+    }
+}
+
+.actions-container li:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-30deg);
+    animation: move 3722ms infinite -2.7s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(1)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(16deg);
+    animation: move 2592ms infinite -2.3s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(2)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-8deg);
+    animation: move 1834ms infinite -1.4s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(3)::before {
+    content: "❤️";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(26deg);
+    animation: move 3507ms infinite -3.1s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(4)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(5) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(32deg);
+    animation: move 3701ms infinite -1.7s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(5)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(6) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-18deg);
+    animation: move 2050ms infinite -2.4s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(6)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(7) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-29deg);
+    animation: move 2745ms infinite -3.9s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(7)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(8) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-34deg);
+    animation: move 1763ms infinite -3.1s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(8)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(9) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(28deg);
+    animation: move 2760ms infinite -0.4s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(9)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:nth-child(10) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-7deg);
+    animation: move 2214ms infinite -2.6s cubic-bezier(.46,.53,.51,.62);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1.5s opacity .8s;
+    user-select: none;
+}
+.actions-container li:nth-child(10)::before {
+    content: "🍿";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+}
+
+.actions-container li:active {
+    transition: 0.1s opacity;
+    opacity: 1 !important;
+}
+@keyframes move {
+    100% {
+        transform: rotate(0) translate(0, -250px);
+    }
+}
+
+::marker {
+    color: transparent;
+}
+
+.historias-carousel {
+    overflow: hidden;
+}
