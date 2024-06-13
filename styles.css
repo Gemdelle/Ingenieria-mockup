@@ -602,14 +602,278 @@ h1 {
 
 .profile-container {
     height: 75%;
-    width: 80%;
+    width: 90%;
     margin: auto;
-    margin-top: 2.7vw;
-    margin-right: 0vw;
-    background-image: url(img/badges.png);
-    background-size: contain;
+    margin-right: 5vw;
+    margin-top: 2vw;
+   background-color: pink; 
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+.metas {
+    height: 100%;
+    width: 65%;
+    display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   background: red;
+}
+
+.meta {
+    height: 22%;
+    width: 100%;
+    background-color: gray;
+}
+
+.submeta {
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barra-progreso {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nombre {
+    color: white;
+    font-size: 1.2vw;
+}
+
+.barra-exterior {
+    width: 60%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 1vw;
+    padding: 0.2vw;
+    box-shadow: 
+        0 0 5px #6300ae,  /* Resplandor cercano y brillante */
+        0 0 10px #6300ae, /* Resplandor intermedio */
+        0 0 20px #6300ae, /* Resplandor más amplio */
+        0 0 30px #6300ae, /* Resplandor adicional para más efecto */
+        0 0 40px #6300ae, /* Resplandor adicional */
+        0 0 50px #6300ae; /* Resplandor adicional */
+}
+
+.barra-interior {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 1vw;
+}
+
+.badges-progreso {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.a-badge {
+    height: 100%;
+    width: 18%;
+    border: 2px solid white;
+    background-size: 50%;
+    border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: 
+    0 0 1vw #6300ae, /* Resplandor adicional */
+    0 0 1vw #6300ae; /* Resplandor adicional */
+}
+
+#a-1 {
+    background-image: url(img/metas/ticket-1.png);
+}
+
+#a-2 {
+    background-image: url(img/metas/ticket-2.png);
+}
+
+#a-3 {
+    background-image: url(img/metas/ticket-3.png);
+}
+
+#a-4 {
+    background-image: url(img/metas/ticket-4.png);
+}
+
+#b-1 {
+    background-image: url(img/metas/acompañado-1.png);
+}
+
+#b-2 {
+    background-image: url(img/metas/acompañado-2.png);
+}
+
+#b-3 {
+    background-image: url(img/metas/acompañado-3.png);
+}
+
+#b-4 {
+    background-image: url(img/metas/acompañado-4.png);
+}
+
+#c-1 {
+    background-image: url(img/metas/martes-1.png);
+}
+
+#c-2 {
+    background-image: url(img/metas/martes-2.png);
+}
+
+#c-3 {
+    background-image: url(img/metas/martes-3.png);
+}
+
+#c-4 {
+    background-image: url(img/metas/martes-4.png);
+}
+
+#d-1 {
+    background-image: url(img/metas/pregunta-0.png);
+}
+
+#d-2 {
+    background-image: url(img/metas/pregunta-1.png);
+}
+
+#d-3 {
+    background-image: url(img/metas/pregunta-2.png);
+}
+
+#d-4 {
+    background-image: url(img/metas/pregunta-3.png);
+}
+
+.mensaje {
+    
+}
+
+.agregar-compra {
+    height: 85%;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 2.5vw;
+    width: 2.5vw;
+    font-size: 2vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5vw;
+}
+
+.data {
+    width: 30%;
+    height: 100%;
+    background-color: blue;
+}
+
+.caja-data {
+    margin: auto;
+    margin-top: 5vw;
+    height: 40%;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1vw;
+    box-shadow: 
+    0 0 5px #6300ae,  /* Resplandor cercano y brillante */
+    0 0 10px #6300ae, /* Resplandor intermedio */
+    0 0 20px #6300ae, /* Resplandor más amplio */
+    0 0 30px #6300ae, /* Resplandor adicional para más efecto */
+    0 0 40px #6300ae, /* Resplandor adicional */
+    0 0 50px #6300ae; /* Resplandor adicional */
+    border: 0.15vw solid white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.data-elementos {
+    width: 70%;
+    height: 40%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: ;
+}
+
+.campo {
+    width: 90%;
+    height: 10%;
+    background-color: white;
+
+}
+
+.data-avatar-container {
+    width: 13vw;
+    height: 13vw;
+    position: absolute;
+    background-image: url(img/avatar-border.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 20vw;
+}
+
+.data-avatar {
+    width: 7.5vw;
+    height: 7.5vw;
+    background-image: url(img/avatar/1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-top: 1.5vw;
+}
+
+.data-barra-exterior {
+    position: relative;
+    top: 5vw;
+    left: 5vw;
+    height: 2vw;
+    width: 20vw;
+    border: 2px solid white;
+    border-radius: 1vw;
+    padding: 0.2vw;
+    box-shadow: 
+        0 0 5px #6300ae,  /* Resplandor cercano y brillante */
+        0 0 10px #6300ae, /* Resplandor intermedio */
+        0 0 20px #6300ae, /* Resplandor más amplio */
+        0 0 30px #6300ae, /* Resplandor adicional para más efecto */
+        0 0 40px #6300ae, /* Resplandor adicional */
+        0 0 50px #6300ae; /* Resplandor adicional */
+}
+
+.data-barra-interior {
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    border-radius: 1vw;
 }
 
 .display-none {
